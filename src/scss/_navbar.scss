@@ -1,0 +1,47 @@
+@use './resets';
+
+.header-nav {
+	// background: red;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	width: 100%;
+
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 90%;
+		margin: 0 auto;
+
+		.brand-wrap {
+			// text-align: center;
+			padding: 1em 0;
+
+			a {
+				img {
+					display: inline-block;
+					width: 150px;
+				}
+			}
+		}
+
+		.nav-list {
+			display: none;
+		}
+
+		.hamburger {
+			display: flex;
+			cursor: pointer;
+			background: red;
+			align-items: center;
+			justify-content: center;
+			height: 100px;
+			width: 100px;
+
+			.fi {
+				font-size: 1.6rem;
+				color: #fff;
+			}
+		}
+	}
+}
