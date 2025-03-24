@@ -1,0 +1,78 @@
+@use '../resets';
+
+.cert-section {
+	padding: 8em 0 4em 0;
+	margin-bottom: 7em;
+
+	.container {
+		display: grid;
+		gap: 1em;
+
+		.img-wrap {
+			img {
+				width: 100%;
+			}
+		}
+
+		.text-wrap {
+			.heading {
+				text-align: center;
+				font-size: resets.$heading-font-size;
+				margin-bottom: 0.3em;
+			}
+
+			.sub-text {
+				margin-bottom: 2em;
+			}
+
+			.btn-wrap {
+				.btn {
+					background: #f32a10;
+					padding: resets.$btn-padding;
+					color: resets.$light;
+					border: none;
+					text-transform: capitalize;
+					transition: all 0.3s ease-in;
+					width: 100%;
+				}
+			}
+
+			@include resets.breakpoints();
+		}
+
+		@media screen and (min-width: 43em) {
+			.img-wrap {
+				width: 60%;
+				margin: 0 auto;
+			}
+
+			.text-wrap {
+				max-width: 600px;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			width: 80%;
+			margin: 0 auto;
+			gap: 2.8em;
+			align-items: center;
+
+			.img-wrap {
+				width: 100%;
+			}
+
+			.text-wrap {
+				.heading {
+					text-align: left;
+				}
+
+				.btn-wrap {
+					.btn {
+						width: unset;
+					}
+				}
+			}
+		}
+	}
+}

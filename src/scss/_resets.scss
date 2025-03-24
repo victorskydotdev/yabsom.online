@@ -1,5 +1,11 @@
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+// ideas in random places
+
 *,
 *::before,
 *::after {
@@ -12,8 +18,20 @@ html {
 	scroll-behavior: smooth;
 }
 
+// yabsom design variables
+$hero-heading-color: #d03438;
+$dark: #373737;
+$p-text-color: #7b7b7b;
+$gradient: linear-gradient(145deg, #f32a10, #f58031);
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+$light: #ffffff;
+$font-family: 'Poppins', sans-serif;
+$btn-padding: 15px 30px;
+$line-height: 1.8;
+$heading-font-size: 2rem;
+
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: $font-family;
 	font-size: 16px;
 	line-height: 1.5;
 	color: #333;
@@ -28,6 +46,10 @@ a {
 	color: #333;
 }
 
+p {
+	font-size: 15px;
+}
+
 button {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -39,5 +61,82 @@ button {
 
 	&:hover {
 		background-color: #f0f0f0; /* Add hover effect */
+	}
+}
+
+@mixin text-gradient() {
+	background: -webkit-linear-gradient(145deg, #f32a10, #f58031);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.fixed-social-icons {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 60px;
+	min-height: 150px;
+	background: $light;
+	box-shadow: $shadow;
+	padding: 1em 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	z-index: 1;
+
+	i {
+		font-size: 1.7rem;
+		@include text-gradient();
+	}
+
+	img {
+		width: 1.7rem;
+	}
+
+	@media screen and (max-width: 43em) {
+		// background: teal;
+		display: none;
+	}
+}
+
+@mixin primary-btn() {
+	background: #f32a10;
+	padding: $btn-padding;
+	color: $light;
+	border: none;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.3);
+	}
+}
+
+@mixin secondary-btn {
+	background: $light;
+	padding: $btn-padding;
+	color: $dark;
+	border: none;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.3);
+	}
+}
+
+@mixin breakpoints() {
+	width: 90%;
+	margin: 0 auto;
+
+	@media screen and (min-width: 43em) {
+		width: 85%;
+	}
+
+	@media screen and (min-width: 62em) {
+		width: 80%;
 	}
 }

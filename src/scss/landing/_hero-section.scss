@@ -1,24 +1,101 @@
 @use '../resets';
 
 .hero-section {
+	position: relative;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	height: 85vh;
-	// background: red;
-	padding-top: 10em;
+	min-height: 100vh;
+	padding-top: 15em;
+	padding-bottom: 5em;
+
+	.layer-blur {
+		position: absolute;
+		height: 300px;
+		width: 300px;
+		border-radius: 50%;
+		top: 20%;
+		left: 0;
+		background: resets.$gradient;
+		opacity: 0.4;
+		filter: blur(100px);
+
+		@media screen and (min-width: 43em) {
+			height: 500px;
+			width: 500px;
+		}
+	}
 
 	.container {
-		.img-wrap {
-			text-align: center;
+		z-index: 1;
+		display: grid;
+		gap: 2em;
+		@include resets.breakpoints();
 
-			img {
-				width: 200px;
+		.text-wrap {
+			max-width: 650px;
+
+			.heading {
+				color: resets.$hero-heading-color;
+				font-size: clamp(2rem, 3vw, 4rem);
+				margin-bottom: 0.3em;
+			}
+
+			.sub-text {
+				margin-bottom: 1.5em;
+				color: resets.$dark;
+				line-height: 1.8;
+			}
+
+			.btn-wrap {
+				display: flex;
+				gap: 0.8em;
+
+				.primary-btn {
+					@include resets.primary-btn();
+				}
+
+				.secondary-btn {
+					@include resets.secondary-btn();
+				}
 			}
 		}
 
-		.heading {
-			text-align: center;
+		.img-wrap {
+			height: 300px;
+			width: 100%;
+			background: resets.$dark;
+			overflow: hidden;
+
+			.img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			align-items: center;
+
+			.img-wrap {
+				position: absolute;
+				right: 0;
+				width: 400px;
+				height: 380px;
+			}
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		height: 1.5px;
+		width: 95%;
+		background: resets.$gradient;
+		right: 0;
+
+		@media screen and (min-width: 62em) {
+			width: 90%;
 		}
 	}
 }

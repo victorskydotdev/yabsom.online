@@ -1,0 +1,39 @@
+@use '../resets';
+
+.intro-section {
+	padding: 7em 0;
+
+	.container {
+		@include resets.breakpoints();
+
+		.wrap {
+			.heading {
+				font-size: resets.$heading-font-size;
+				color: resets.$dark;
+				margin-bottom: 1em;
+			}
+
+			.sub-text {
+				color: resets.$p-text-color;
+				line-height: resets.$line-height;
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			max-width: 680px;
+		}
+
+		@media screen and (min-width: 62em) {
+			max-width: unset;
+
+			.wrap {
+				text-align: center;
+
+				.sub-text {
+					max-width: 630px;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

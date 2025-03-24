@@ -1,0 +1,41 @@
+@use '../resets';
+
+.programs-section {
+	padding-top: 3em;
+
+	.container {
+		.text-wrap {
+			text-align: center;
+			width: 70%;
+			margin: 0 auto;
+			margin-bottom: 4em;
+
+			.heading {
+				font-size: resets.$heading-font-size;
+			}
+		}
+
+		.wrap {
+			display: grid;
+			gap: 1em;
+			grid-auto-flow: column;
+			grid-auto-columns: 80%;
+			overflow-x: auto;
+			// scroll-snap-type: mandatory !important;
+			// scroll-snap-align: start;
+
+			.card {
+				height: 400px;
+				background: red;
+			}
+
+			@media screen and (min-width: 43em) {
+				grid-auto-columns: 40%;
+			}
+
+			@media screen and (min-width: 62em) {
+				grid-auto-columns: 30%;
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+@use '../resets';
+
+.about-intro-section {
+	padding: 7em 0 4em 0;
+
+	.container {
+		display: grid;
+		gap: 2em;
+		grid-template-areas:
+			'text-wrap'
+			'img-wrap';
+
+		@include resets.breakpoints();
+
+		.text-wrap {
+			.heading {
+				margin-bottom: 0.5em;
+				font-size: resets.$heading-font-size;
+
+				.highlight {
+					@include resets.text-gradient();
+				}
+			}
+
+			.sub-text {
+				line-height: resets.$line-height;
+				margin-bottom: 1em;
+			}
+
+			.btn-wrap {
+				.link {
+					display: inline-block;
+					box-shadow: resets.$shadow;
+					@include resets.primary-btn();
+				}
+			}
+		}
+
+		.img-wrap {
+			display: grid;
+			gap: 1em;
+			grid-area: img-wrap;
+
+			.card {
+				height: 250px;
+				width: 100%;
+				background: teal;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			gap: 2em;
+
+			.img-wrap {
+				display: flex;
+
+				.card {
+					width: 230px;
+					height: 350px;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		padding-top: 10em;
+
+		.container {
+			width: 90%;
+
+			.text-wrap {
+				padding-top: 1.5em;
+
+				.sub-text {
+					margin-bottom: 2em;
+				}
+			}
+		}
+	}
+}

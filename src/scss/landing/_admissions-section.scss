@@ -1,0 +1,78 @@
+@use '../resets';
+
+.admissions-section {
+	margin-bottom: 7em;
+
+	.container {
+		min-height: 410px;
+		background: resets.$dark;
+
+		position: relative;
+		display: grid;
+		// gap: 3em;
+		@include resets.breakpoints();
+
+		.text-wrap {
+			color: resets.$light;
+			max-width: 550px;
+			padding: 3em;
+
+			.heading {
+				font-size: resets.$heading-font-size;
+				max-width: 350px;
+				margin-bottom: 0.6em;
+			}
+
+			.sub-text {
+				margin-bottom: 1.5em;
+				line-height: resets.$line-height;
+			}
+
+			.btn {
+				@include resets.primary-btn();
+			}
+		}
+
+		.img-wrap {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				height: 380px;
+				width: 90%;
+				background: resets.$gradient;
+				left: 5%;
+			}
+
+			img {
+				width: 100%;
+				position: relative;
+				z-index: 1;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+
+			.text-wrap {
+				padding-left: 4em;
+			}
+
+			.img-wrap {
+				position: absolute;
+				right: 0;
+				bottom: -7px !important;
+
+				&::before {
+					height: 250px;
+					top: 30%;
+				}
+
+				img {
+					width: 450px;
+				}
+			}
+		}
+	}
+}

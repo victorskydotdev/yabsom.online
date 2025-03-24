@@ -1,0 +1,75 @@
+@use './resets';
+
+.footer {
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		display: grid;
+		gap: 2em;
+
+		.wrap {
+			.brand-wrap {
+				margin-bottom: 1.4em;
+
+				img {
+					width: 150px;
+				}
+			}
+
+			.heading {
+				margin-bottom: 1.5em;
+			}
+
+			.contact-details {
+				display: grid;
+				gap: 1em;
+			}
+
+			.footer-nav {
+				display: grid;
+				gap: 1em;
+			}
+
+			.wrapper {
+				display: grid;
+				gap: 4em;
+
+				.footer-social-icons {
+					display: flex;
+					gap: 1.5em;
+					position: relative;
+					width: fit-content;
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 150%;
+						left: 0;
+						background: resets.$gradient;
+						height: 1.5px;
+						width: 100%;
+					}
+
+					i {
+						font-size: 1.4rem;
+					}
+					img {
+						width: 1.4em;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			height: 300px;
+			justify-content: space-between;
+			width: 80%;
+			padding-top: 3em;
+		}
+	}
+}

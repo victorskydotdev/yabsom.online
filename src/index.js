@@ -1,3 +1,7 @@
 import './scss/main.scss';
 
-console.log('Hello, Webpack!');
+// importing modules
+import { loadNavbar } from './app/navbar';
+// console.log('Hello, Webpack!');
+
+loadNavbar();
