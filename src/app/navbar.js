@@ -43,5 +43,15 @@ const navbarTemplate = () => {
 export const loadNavbar = () => {
 	if (headerNavWrap) {
 		headerNavWrap.innerHTML = navbarTemplate();
+
+		const modifyNavBg = () => {
+			window.addEventListener('scroll', () => {
+				if (window.scrollY >= 200) {
+					headerNavWrap.classList.add('add-nav-bg');
+				} else headerNavWrap.classList.remove('add-nav-bg');
+			});
+		};
+
+		modifyNavBg();
 	}
 };

@@ -23,10 +23,76 @@
 			overflow-x: auto;
 			// scroll-snap-type: mandatory !important;
 			// scroll-snap-align: start;
+			padding-left: 3em;
+			padding-bottom: 3em;
 
-			.card {
+			.program-card {
 				height: 400px;
-				background: red;
+				position: relative;
+
+				.content {
+					// background: resets.$dark;
+					height: 95%;
+					width: 95%;
+					position: absolute;
+					left: 2.5%;
+					top: 2.5%;
+
+					.text-wrap {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						justify-content: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 1;
+						display: grid;
+						gap: 1em;
+
+						.title {
+							color: resets.$light;
+							font-size: 1.2rem;
+						}
+
+						.btn {
+							@include resets.primary-btn();
+						}
+					}
+
+					.img-wrap {
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							object-position: center;
+							border-radius: 30px;
+						}
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0%;
+						height: 100%;
+						width: 100%;
+						background: rgba(0, 0, 0, 0.726);
+						border-radius: 30px;
+					}
+				}
+
+				.overlay {
+					height: 100%;
+					position: absolute;
+					width: 100%;
+
+					background: resets.$gradient;
+					z-index: -1;
+				}
 			}
 
 			@media screen and (min-width: 43em) {
@@ -35,6 +101,8 @@
 
 			@media screen and (min-width: 62em) {
 				grid-auto-columns: 30%;
+				gap: 1em;
+				padding-bottom: 3em;
 			}
 		}
 	}

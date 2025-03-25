@@ -7,6 +7,7 @@
 	display: flex;
 	align-items: center;
 	z-index: 2;
+	transition: all 0.5s ease-in;
 
 	.nav {
 		display: flex;
@@ -66,4 +67,9 @@
 			background: unset;
 		}
 	}
+}
+
+.add-nav-bg {
+	background: resets.$light;
+	box-shadow: resets.$shadow;
 }
