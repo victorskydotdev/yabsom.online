@@ -1,7 +1,4 @@
-const Mailgun = require('mailgun-js');
-const formData = require('form-data');
-
-const mailgun = new Mailgun(formData);
+// const Mailgun = require('mailgun-js');
 
 exports.handler = async (event) => {
 	if (event.httpMethod !== 'POST') {
@@ -11,24 +8,28 @@ exports.handler = async (event) => {
 		};
 	}
 
-	const { name, email, message } = JSON.parse(event.body);
+	// const { name, email, message } = JSON.parse(event.body);
+	const formData = JSON.parse(event.body);
 
-	if (!name || !email || !message) {
+	if (!formData) {
 		return {
 			statusCode: 400,
 			body: JSON.stringify({ message: 'Missing required fields' }),
 		};
 	}
 
-	const data = {
-		from: FROM_EMAIL_ADDRESS,
-		to: CONTACT_TO_EMAIL_ADDRESS,
-		subject: `New message from ${name}`,
-		text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-	};
+	// const { name, email, message } = formData;
+
+	// const data = {
+	// 	from: FROM_EMAIL_ADDRESS,
+	// 	to: CONTACT_TO_EMAIL_ADDRESS,
+	// 	subject: `New message from ${name}`,
+	// 	text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+	// };
 
 	try {
-		await mailgun.messages().send(data);
+		// await mailgun.messages().send(data);
+		console.log(formData);
 		return {
 			statusCode: 200,
 			body: JSON.stringify({ message: 'Email sent successfully' }),

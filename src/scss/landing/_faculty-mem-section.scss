@@ -48,5 +48,10 @@
 				@include resets.primary-btn();
 			}
 		}
+
+		// disabling the "see all faculty members" button on the about us page
+		.about-page-btn {
+			display: none;
+		}
 	}
 }
