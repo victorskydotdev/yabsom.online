@@ -110,6 +110,8 @@ button {
 	text-transform: capitalize;
 	transition: all 0.3s ease-in;
 
+	display: inline-block;
+
 	&:hover {
 		box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.3);
 	}
@@ -138,5 +140,22 @@ button {
 
 	@media screen and (min-width: 62em) {
 		width: 80%;
+	}
+}
+
+@mixin layer-blur() {
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	top: 20%;
+	left: 0;
+	background: $gradient;
+	opacity: 0.4;
+	filter: blur(100px);
+
+	@media screen and (min-width: 43em) {
+		height: 500px;
+		width: 500px;
 	}
 }

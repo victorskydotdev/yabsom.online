@@ -6,13 +6,14 @@
 	height: 20vh;
 	display: flex;
 	align-items: center;
-	z-index: 2;
+	z-index: 4;
 	transition: all 0.5s ease-in;
 
 	.nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		@include resets.breakpoints();
 
 		.brand-wrap {
@@ -39,7 +40,19 @@
 				display: flex;
 				justify-content: space-between;
 				gap: 2em;
-				padding-left: 3em;
+				// padding-left: 3em;
+			}
+		}
+
+		.nav-btn {
+			display: none;
+
+			.btn {
+				@include resets.primary-btn();
+			}
+
+			@media screen and (min-width: 62em) {
+				display: block;
 			}
 		}
 
@@ -57,14 +70,10 @@
 				color: #fff;
 				padding-top: 0.3em;
 			}
-		}
 
-		@media screen and (min-width: 43em) {
-			// background: teal;
-		}
-
-		@media screen and (min-width: 43em) {
-			background: unset;
+			@media screen and (min-width: 62em) {
+				display: none;
+			}
 		}
 	}
 }

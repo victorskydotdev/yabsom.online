@@ -8,3 +8,8 @@
 @use './landing/cert-section';
 @use './landing/admissions-section';
 @use './footer';
+
+@use './about-page/about-main';
+@use './about-page/about-us';
+@use './about-page/ycu-section';
+@use './about-page/our-values-section';

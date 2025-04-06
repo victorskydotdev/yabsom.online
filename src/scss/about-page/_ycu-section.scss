@@ -1,0 +1,96 @@
+@use '../resets';
+
+.ycu-section {
+	padding: 7em 0 7em 0;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 100%;
+
+		top: 100%;
+		left: 0;
+		background: resets.$gradient;
+	}
+
+	.container {
+		.text-wrap {
+			margin-bottom: 3em;
+
+			.heading {
+				font-size: 2rem;
+				margin-bottom: 1em;
+				color: resets.$dark;
+				@include resets.breakpoints();
+			}
+
+			.sub-text {
+				color: resets.$dark;
+				@include resets.breakpoints();
+
+				@media screen and (min-width: 62em) {
+					// all: unset;
+					margin: unset;
+					margin-left: 10%;
+					width: 500px;
+				}
+			}
+		}
+
+		.card-wrap {
+			display: grid;
+			grid-auto-flow: column;
+			grid-auto-columns: 90%;
+			overflow-x: auto;
+			padding-left: 5%;
+			gap: 1em;
+			padding-bottom: 1em;
+			scroll-snap-type: x mandatory;
+
+			.card {
+				scroll-snap-align: start;
+				background: resets.$dark;
+				color: resets.$light;
+				// padding: 1.5em;
+				border-radius: 1em;
+				overflow: hidden;
+
+				.wrap {
+					.img-wrap {
+						height: 150px;
+						width: 100%;
+						background: resets.$light;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							object-position: center;
+						}
+					}
+				}
+
+				.text-area {
+					padding: 1em 1.5em 1.8em 1.5em;
+
+					.heading {
+						margin-bottom: 1em;
+					}
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				grid-auto-columns: 50%;
+			}
+
+			@media screen and (min-width: 62em) {
+				grid-auto-columns: 30%;
+				scroll-snap-type: unset;
+
+				padding-left: 10%;
+			}
+		}
+	}
+}

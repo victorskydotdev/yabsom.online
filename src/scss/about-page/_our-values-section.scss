@@ -1,0 +1,171 @@
+@use '../resets';
+
+.our-values-section {
+	padding: 6em 0;
+	background: #f8fafb;
+	position: relative;
+
+	.dots-wrap {
+		display: grid;
+		gap: 0.4em;
+
+		.dot {
+			height: 7px;
+			width: 7px;
+			background: resets.$gradient;
+			opacity: 0.2;
+			border-radius: 50%;
+			position: absolute;
+			top: 20%;
+			// left: 0;
+
+			&:nth-child(1) {
+				left: 5%;
+				// top: 5%;
+			}
+			&:nth-child(2) {
+				left: 20%;
+				top: 10%;
+			}
+			&:nth-child(3) {
+				left: 26%;
+				top: 25%;
+			}
+			&:nth-child(4) {
+				left: 37%;
+				top: 5%;
+			}
+			&:nth-child(5) {
+				left: 45%;
+				top: 28%;
+			}
+			&:nth-child(6) {
+				left: 55%;
+				top: 16%;
+			}
+			&:nth-child(7) {
+				left: 65%;
+				top: 23%;
+			}
+			&:nth-child(8) {
+				left: 75%;
+				top: 10%;
+			}
+			&:nth-child(9) {
+				left: 90%;
+				top: 5%;
+			}
+			&:nth-child(10) {
+				left: 85%;
+				top: 20%;
+			}
+		}
+	}
+
+	.container {
+		display: grid;
+		gap: 4em;
+
+		.text-wrap {
+			text-align: center;
+
+			.heading {
+				font-size: 2rem;
+				text-transform: capitalize;
+				margin-bottom: 0.7em;
+			}
+
+			.sub-text {
+				color: resets.$dark;
+				margin: 0 auto;
+				width: 90%;
+				max-width: 600px;
+				margin-bottom: 2em;
+				line-height: resets.$line-height;
+			}
+
+			.btn-wrap {
+				.btn {
+					padding: 0.8em 2em;
+					font-size: 1rem;
+					@include resets.primary-btn();
+				}
+			}
+		}
+
+		.values-card-wrap {
+			display: grid;
+			gap: 1em;
+			@include resets.breakpoints();
+
+			.card {
+				min-height: 200px;
+				width: 100%;
+				background: resets.$light;
+				border-radius: 10px;
+				padding: 2em;
+				transition: all 0.3s ease-in;
+				cursor: pointer;
+
+				&:hover {
+					box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+				}
+
+				.icon-wrap {
+					height: 60px;
+					width: 60px;
+					background: transparent;
+					border-radius: 5px;
+					border: 2px solid #f32a10;
+					opacity: 0.6;
+					position: relative;
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-bottom: 1.5em;
+
+					&::after {
+						content: '';
+						position: absolute;
+						height: 100px;
+						width: 100%;
+						top: 0;
+						left: 0;
+						background: #f32a10;
+						opacity: 0.3;
+					}
+
+					i {
+						font-size: 1.5rem;
+						position: re;
+						z-index: 2;
+						color: #f32a10;
+					}
+				}
+
+				.wrap {
+					text-align: left;
+
+					.heading-title {
+						margin-bottom: 1.5em;
+					}
+
+					.sub-text {
+						text-align: left;
+					}
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5em;
+			}
+
+			@media screen and (min-width: 62em) {
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2em;
+			}
+		}
+	}
+}

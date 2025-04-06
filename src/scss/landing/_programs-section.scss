@@ -1,7 +1,7 @@
 @use '../resets';
 
 .programs-section {
-	padding-top: 3em;
+	padding-top: 10em;
 
 	.container {
 		.text-wrap {
@@ -19,16 +19,17 @@
 			display: grid;
 			gap: 1em;
 			grid-auto-flow: column;
-			grid-auto-columns: 80%;
+			grid-auto-columns: 90%;
 			overflow-x: auto;
-			// scroll-snap-type: mandatory !important;
-			// scroll-snap-align: start;
+			scroll-snap-type: x mandatory;
+
 			padding-left: 3em;
 			padding-bottom: 3em;
 
 			.program-card {
 				height: 400px;
 				position: relative;
+				scroll-snap-align: start;
 
 				.content {
 					// background: resets.$dark;

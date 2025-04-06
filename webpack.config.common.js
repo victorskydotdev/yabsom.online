@@ -17,6 +17,32 @@ module.exports = {
 			filename: 'index.html',
 			chunks: ['main'],
 		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/html/about.html',
+			filename: 'about.html',
+			chunks: ['main'],
+		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/html/contact.html',
+			filename: 'contact.html',
+			chunks: ['main'],
+		}),
+
+		// for the dynamic rendering of the individual faculty members
+		new HtmlWebpackPlugin({
+			template: './src/html/faculty-member.html',
+			filename: 'faculty-member.html',
+			chunks: ['main'],
+		}),
+
+		// for dynamic rendering of the individual course object(data)
+		new HtmlWebpackPlugin({
+			template: './src/html/course.html',
+			filename: 'course.html',
+			chunks: ['main'],
+		}),
 	],
 
 	module: {

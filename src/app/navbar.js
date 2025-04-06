@@ -5,14 +5,14 @@ const navbarTemplate = () => {
 	return `
     <nav class="nav">
       <div class="brand-wrap">
-        <a href="#" class="nav-logo">
+        <a href="/" class="nav-logo">
           <img src="${brandLogo}" alt="" />
         </a>
       </div>
 
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="#" class="nav-link">Programs</a>
+          <a href="/#programs" class="nav-link">Programs</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Resources</a>
@@ -28,14 +28,14 @@ const navbarTemplate = () => {
         </li>
       </ul>
 
-      <ul class="second-nav">
-        
-      </ul>
+      <div class="nav-btn">
+        <a href="#" class="btn btn-primary">Enrol Now</a>
+      </div>
 
       <!-- hamburger -->
       <div class="hamburger">
         <i class="fi fi-rr-bars-staggered"></i>
-      </div>
+      </div> 
     </nav>
   `;
 };
