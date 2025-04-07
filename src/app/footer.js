@@ -55,10 +55,25 @@ const footerTemplate = () => {
           </p>
 
           <div class="footer-social-icons">
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <img src="${whatsappIcon}" alt="" />
+            
+            <a href="https://www.linkedin.com/company/young-african-business-school-of-manufacturing/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://web.facebook.com/businessschoolofmanufacturing/" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>  
+          
+          
+            <a href="https://www.instagram.com/businessschoolofmanufacturing?igsh=MTRydTJmNTkyZHQyMQ==" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          
+            <div class="whatsapp-icon">
+              <a href="https://wa.me/+2348039321210?text=I want to learn more about Yabsom" target="_blank">
+                <img src="${whatsappIcon}" alt="" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
