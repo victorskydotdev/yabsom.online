@@ -12,11 +12,15 @@ export const expandPresAddress = () => {
     `;
 	};
 
-	if (expandBtn) {
+	if (expandBtn && addressModal) {
 		expandBtn.addEventListener('click', () => {
-			alert("President's address button clicked");
+			setTimeout(() => {
+				addressModal.style.opacity = 1;
+				addressModal.style.visibility = 'visible';
+				// addressModal.classList.add('active');
 
-			console.log(addressModal);
+				addressModal.innerHTML = addTemplate();
+			}, 500);
 		});
 	}
 };

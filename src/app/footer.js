@@ -22,7 +22,7 @@ const footerTemplate = () => {
             <div class="icon">
               <i class="fa-solid fa-phone"></i>
             </div>
-            <p class="phone">+234(0) 811 183 4734</p>
+            <p class="phone">+234 803 932 1210</p>
           </div>
         </div>
       </div>

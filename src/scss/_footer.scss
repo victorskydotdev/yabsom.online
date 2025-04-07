@@ -28,6 +28,11 @@
 				div {
 					display: flex;
 					align-items: center;
+					gap: 10px;
+
+					i {
+						@include resets.text-gradient();
+					}
 				}
 			}
 
@@ -58,7 +63,9 @@
 
 					i {
 						font-size: 1.4rem;
+						@include resets.text-gradient();
 					}
+
 					img {
 						width: 1.4em;
 					}
