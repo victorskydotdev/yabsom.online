@@ -1,0 +1,119 @@
+@use '../resets';
+
+.masthead-section {
+	min-height: 400px;
+	display: flex;
+	margin-bottom: 8em;
+
+	align-items: center;
+	justify-content: center;
+	padding-top: 7em;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 110%;
+		left: 5%;
+		width: 90%;
+		height: 1.5px;
+		background: resets.$gradient;
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+			left: 20%;
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 50%;
+			left: 25%;
+		}
+	}
+
+	.container {
+		position: relative;
+
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 15em;
+		text-align: center;
+
+		.heading {
+			text-align: center;
+			margin-bottom: 0.6em;
+		}
+
+		.text {
+			line-height: 1.8;
+		}
+
+		img {
+			position: absolute;
+			height: 120px;
+			bottom: 45%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+
+			img {
+				bottom: 45%;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 50%;
+			padding-top: 10em;
+
+			img {
+				// bottom: 4%;
+			}
+		}
+	}
+}
+
+.article {
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		padding: 2em 0;
+		display: grid;
+		gap: 2em;
+
+		.wrap {
+			.heading {
+				margin-bottom: 1em;
+				font-weight: 600;
+				line-height: 1.5;
+			}
+
+			p {
+				margin-bottom: 1em;
+				line-height: 1.8;
+				font-size: 15px;
+			}
+
+			ul {
+				margin-bottom: 1em;
+				padding-left: 2em;
+
+				li {
+					margin-bottom: 0.5em;
+					line-height: 1.8;
+					font-size: 15px;
+					list-style: disc;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 50%;
+		}
+	}
+}

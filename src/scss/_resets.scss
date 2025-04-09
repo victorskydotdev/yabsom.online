@@ -41,13 +41,15 @@ ul {
 	list-style: none;
 }
 
+li,
+p {
+	font-size: 15px;
+	color: $p-text-color;
+}
+
 a {
 	text-decoration: none;
 	color: #333;
-}
-
-p {
-	font-size: 15px;
 }
 
 button {

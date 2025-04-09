@@ -34,6 +34,7 @@ const footerTemplate = () => {
           <li><a href="/about.html" class="link">About Yabsom</a></li>
           <li><a href="/contact.html" class="link">Contact us</a></li>
           <li><a href="/careers.html" class="link">Careers</a></li>
+          
         </ul>
       </div>
 
@@ -43,6 +44,8 @@ const footerTemplate = () => {
         <ul class="footer-nav">
           <li><a href="" class="link">Registration</a></li>
           <li><a href="" class="link">Admissions us</a></li>
+          <li><a href="/privacy-policy.html" class="link">Privacy policy</a></li>
+          <li><a href="/terms.html" class="link">Terms of service</a></li>
         </ul>
       </div>
       <div class="wrap">
