@@ -1,5 +1,52 @@
 @use '../resets';
 
+.loadspin-modal {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: rgba(0, 0, 0, 0.733);
+	z-index: 4;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease-in;
+
+	.wrap {
+		text-align: center;
+		color: resets.$light;
+
+		.fa-spinner {
+			font-size: 3em;
+			color: resets.$light;
+			margin-bottom: 0.6em;
+			// animation: spin 1s linear infinite;
+
+			// @keyframes spin {
+			// 	0% {
+			// 		transform: rotate(0deg);
+			// 	}
+			// 	100% {
+			// 		transform: rotate(360deg);
+			// 	}
+			// }
+		}
+
+		.loading-text {
+			color: resets.$light;
+		}
+	}
+}
+
+.show-loading {
+	opacity: 1;
+	visibility: visible;
+	// transition: all 0.5s ease-in;
+}
+
 .faculty-mem-section {
 	padding: 7em 0 0 0;
 
@@ -7,11 +54,11 @@
 		@include resets.breakpoints();
 
 		.text-wrap {
-			text-align: center;
 			margin-bottom: 3em;
 
 			.heading {
 				font-size: resets.$heading-font-size;
+				text-align: center;
 			}
 		}
 
@@ -23,12 +70,60 @@
 			.card {
 				height: 400px;
 				width: 100%;
-				background: orange;
+				background: resets.$dark;
+				position: relative;
 
 				img {
 					height: 100%;
 					width: 100%;
 					object-fit: cover;
+					transition: all 0.6s ease-in-out;
+				}
+
+				.member-info-wrap {
+					position: absolute;
+					top: 65%;
+					text-align: center;
+
+					left: 50%;
+					transform: translateX(-50%);
+
+					.text-wrap {
+						color: resets.$light;
+						opacity: 0;
+						visibility: hidden;
+						transition: all 0.6s ease-in-out;
+						// background: red;
+
+						.name {
+							text-wrap: nowrap;
+						}
+
+						.sub-text {
+							color: resets.$light;
+						}
+
+						.button-wrap {
+							button {
+								@include resets.primary-btn();
+								margin-top: 1em;
+							}
+						}
+					}
+				}
+
+				&:hover {
+					img {
+						transform: translateY(0);
+						height: 60%;
+					}
+
+					.member-info-wrap {
+						.text-wrap {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
 				}
 			}
 
@@ -37,7 +132,13 @@
 			}
 
 			@media screen and (min-width: 63em) {
-				grid-template-columns: repeat(3, 1fr);
+				// grid-template-columns: repeat(3, 1fr);
+				display: flex;
+				justify-content: center;
+
+				.card {
+					width: 350px;
+				}
 			}
 		}
 

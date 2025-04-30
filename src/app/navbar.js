@@ -12,16 +12,16 @@ const navbarTemplate = () => {
 
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="/#programs" class="nav-link">Programs</a>
+          <a href="" class="nav-link program-link">Programs</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Resources</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Admissions</a>
+          <a href="/admission.html" class="nav-link">Admissions</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Industry Engagements</a>
+          <a href="/about.html" class="nav-link">About us</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Events & News</a>
@@ -29,7 +29,7 @@ const navbarTemplate = () => {
       </ul>
 
       <div class="nav-btn">
-        <a href="#" class="btn btn-primary">Enrol Now</a>
+        <a href="#" class="btn btn-primary">Register</a>
       </div>
 
       <!-- hamburger -->

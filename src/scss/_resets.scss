@@ -47,9 +47,13 @@ p {
 	color: $p-text-color;
 }
 
+.light-p {
+	color: $light;
+}
+
 a {
 	text-decoration: none;
-	color: #333;
+	color: $p-text-color;
 }
 
 button {
@@ -63,6 +67,16 @@ button {
 
 	&:hover {
 		background-color: #f0f0f0; /* Add hover effect */
+	}
+}
+
+.arc-shaped-bg {
+	position: absolute;
+	top: 40%;
+
+	img {
+		height: 100%;
+		width: 100%;
 	}
 }
 

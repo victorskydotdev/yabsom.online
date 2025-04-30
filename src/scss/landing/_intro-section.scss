@@ -14,8 +14,21 @@
 			}
 
 			.sub-text {
+				margin-bottom: 3em;
 				color: resets.$p-text-color;
 				line-height: resets.$line-height;
+			}
+
+			.wrap {
+				display: grid;
+				gap: 2em;
+
+				.stats {
+					.num {
+						color: #f32a10;
+						font-size: 2rem;
+					}
+				}
 			}
 		}
 
@@ -32,6 +45,13 @@
 				.sub-text {
 					max-width: 630px;
 					margin: 0 auto;
+					margin-bottom: 3em;
+				}
+
+				.wrap {
+					display: flex;
+					justify-content: center;
+					gap: 6em;
 				}
 			}
 		}

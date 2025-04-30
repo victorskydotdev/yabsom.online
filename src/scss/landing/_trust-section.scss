@@ -1,0 +1,30 @@
+@use '../resets';
+
+.trust-section {
+	margin-bottom: 6em;
+	.container {
+		.text-wrap {
+			text-align: center;
+
+			.heading {
+				font-size: resets.$heading-font-size;
+				color: resets.$dark;
+				margin-bottom: 1em;
+			}
+		}
+
+		.trust-wrap {
+			// background: teal;
+			display: flex;
+			justify-content: center;
+			gap: 3em;
+			align-items: center;
+
+			.wrap {
+				img {
+					width: 100px;
+				}
+			}
+		}
+	}
+}

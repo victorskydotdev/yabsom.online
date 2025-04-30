@@ -27,6 +27,13 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
+			template: './src/html/admission.html',
+			filename: 'admission.html',
+			chunks: ['main'],
+			favicon: './src/assets/brand-logo.png',
+		}),
+
+		new HtmlWebpackPlugin({
 			template: './src/html/contact.html',
 			filename: 'contact.html',
 			chunks: ['main'],
@@ -35,8 +42,8 @@ module.exports = {
 
 		// for the dynamic rendering of the individual faculty members
 		new HtmlWebpackPlugin({
-			template: './src/html/faculty-member.html',
-			filename: 'faculty-member.html',
+			template: './src/html/faculty-bio.html',
+			filename: 'faculty-bio.html',
 			chunks: ['main'],
 			favicon: './src/assets/brand-logo.png',
 		}),

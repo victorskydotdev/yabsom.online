@@ -8,6 +8,7 @@
 @use './landing/programs-section';
 @use './landing/cert-section';
 @use './landing/admissions-section';
+@use './landing/trust-section';
 @use './footer';
 
 @use './about-page/about-main';
@@ -17,3 +18,9 @@
 
 // terms and privacy stylesheets
 @use './terms-privacy/styles';
+
+@use './faculty-bio';
+@use './registration-form';
+
+// course page
+@use './course-page/course-hero-section';

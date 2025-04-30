@@ -1,7 +1,7 @@
 @use './resets';
 
 .header-nav {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 20vh;
 	display: flex;
@@ -13,7 +13,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
 		@include resets.breakpoints();
 
 		.brand-wrap {
