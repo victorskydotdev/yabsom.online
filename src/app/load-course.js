@@ -11,20 +11,24 @@ export const loadCourseData = () => {
 	}
 };
 
-const checkForEmptyVals = (checkCb) => {
-	return checkCb ? checkCb : '';
-};
+// helper function 1
+const checkForEmptyVals = (val) => val ?? 'data not coming through';
+// end of helper function 1
 
 const layoutTemplate = (callback) => {
+	// console.log('callback.courseModules', callback.courseModules);
 	return `
     <div class="container">
-				<div class="course-art">
-					<img src="${checkForEmptyVals(callback.image)}" alt="">
-				</div>
+				
 
 				<div class="course-heading-wrap">
 					<h3 class="course-title">${checkForEmptyVals(callback.courseTitle)}</h3>
+
 					<h5 class="sub-title">${checkForEmptyVals(callback.subTitle)}</h5>
+				</div>
+
+				<div class="course-art">
+					<img src="${checkForEmptyVals(callback.image)}" alt="">
 				</div>
 
 				<div class="course-content">
@@ -65,24 +69,29 @@ const layoutTemplate = (callback) => {
 
 						<ul class="module-list">
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module1.moduleList.list
+								callback.courseModules.module1.moduleList.list1
 							)}</li>
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module1.moduleList.list
+								callback.courseModules.module1.moduleList.list2
 							)}</li>
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module1.moduleList[2]
+								callback.courseModules.module1.moduleList.list3
 							)}</li>
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module1.moduleList[3]
+								callback.courseModules.module1.moduleList.list4
 							)}</li>
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module1.moduleList[4]
+								callback.courseModules.module1.moduleList.list5
 							)}</li>
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module1.moduleList[5]
+								callback.courseModules.module1.moduleList.list6
 							)}</li>
-							
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module1.moduleList.list7
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module1.moduleList.list8
+							)}</li>
 						</ul>
 					</div>
 
@@ -98,9 +107,29 @@ const layoutTemplate = (callback) => {
 
 						<ul class="module-list">
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module2.moduleList[0]
+								callback.courseModules.module2.moduleList.list1
 							)}</li>
-							
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module2.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module2.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module2.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module2.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module2.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module2.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module2.moduleList.list1
+							)}</li>
 						</ul>
 					</div>
 
@@ -116,9 +145,35 @@ const layoutTemplate = (callback) => {
 
 						<ul class="module-list">
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module3.moduleList[0]
+								callback.courseModules.module3.moduleList.list1
 							)}</li>
-							
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module3.moduleList.list1
+							)}</li>
 						</ul>
 					</div>
 
@@ -134,9 +189,26 @@ const layoutTemplate = (callback) => {
 
 						<ul class="module-list">
 							<li class="list">${checkForEmptyVals(
-								callback.courseModules.module4.moduleList[0]
+								callback.courseModules.module4.moduleList.list1
 							)}</li>
-						
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module4.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module4.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module4.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module4.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module4.moduleList.list1
+							)}</li>
+							<li class="list">${checkForEmptyVals(
+								callback.courseModules.module4.moduleList.list1
+							)}</li>
 						</ul>
 					</div>
 				</div>

@@ -12,7 +12,10 @@ const navbarTemplate = () => {
 
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="" class="nav-link program-link">Programs</a>
+          <a href="/" class="nav-link program-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/#programs" class="nav-link program-link">Programs</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Resources</a>

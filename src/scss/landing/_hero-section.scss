@@ -9,20 +9,7 @@
 	padding-bottom: 5em;
 
 	.layer-blur {
-		position: absolute;
-		height: 300px;
-		width: 300px;
-		border-radius: 50%;
-		top: 20%;
-		left: 0;
-		background: resets.$gradient;
-		opacity: 0.4;
-		filter: blur(100px);
-
-		@media screen and (min-width: 43em) {
-			height: 500px;
-			width: 500px;
-		}
+		@include resets.layerBlur();
 	}
 
 	.container {

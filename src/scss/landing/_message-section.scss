@@ -1,9 +1,19 @@
 @use '../resets';
 
 .message-section {
+	position: relative;
+
+	.dotgrid-img-wrap {
+		position: absolute;
+
+		img {
+			width: 100%;
+		}
+	}
+
 	.container {
 		min-height: 410px;
-		background: resets.$dark;
+		// background: resets.$dark;
 
 		position: relative;
 		display: grid;
@@ -11,7 +21,7 @@
 		@include resets.breakpoints();
 
 		.text-wrap {
-			color: resets.$light;
+			color: resets.$dark;
 			max-width: 550px;
 			padding: 3em;
 
@@ -24,12 +34,13 @@
 			.sub-text {
 				margin-bottom: 1.5em;
 				line-height: resets.$line-height;
+				color: resets.$p-text-color;
 			}
 
 			.expand-btn {
 				background: transparent;
 				border: none;
-				color: resets.$light;
+				@include resets.text-gradient();
 			}
 		}
 
@@ -39,10 +50,13 @@
 			&::before {
 				content: '';
 				position: absolute;
-				height: 400px;
-				width: 90%;
-				background: resets.$light;
-				left: 5%;
+
+				height: 10px;
+				width: 102%;
+				background: resets.$gradient;
+				left: 0;
+				bottom: 0;
+				z-index: 3;
 			}
 
 			img {
@@ -54,6 +68,7 @@
 
 		@media screen and (min-width: 62em) {
 			display: flex;
+			width: 80%;
 
 			.text-wrap {
 				padding-left: 4em;
@@ -64,10 +79,10 @@
 				right: 0;
 				bottom: -7px !important;
 
-				&::before {
-					height: 300px;
-					top: 30%;
-				}
+				// &::before {
+				// 	height: 300px;
+				// 	top: 30%;
+				// }
 
 				img {
 					width: 450px;

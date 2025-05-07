@@ -31,21 +31,21 @@ export const coursesObject = [
 				moduleDuration: 'Weeks 1-3',
 
 				moduleList: {
-					list: 'Profitable Manufacturing Business Ideas',
+					list1: 'Profitable Manufacturing Business Ideas',
 
-					list: 'Picking a Viable Niche',
+					list2: 'Picking a Viable Niche',
 
-					list: 'Different Types of Manufacturing',
+					list3: 'Different Types of Manufacturing',
 
-					list: 'Market Research for Manufacturers',
+					list4: 'Market Research for Manufacturers',
 
-					list: 'Product Research and Development',
+					list5: 'Product Research and Development',
 
-					list: 'Equipment Research and Selection',
+					list6: 'Equipment Research and Selection',
 
-					list: 'Defining Your Own Manufacturing Business Model',
+					list7: 'Defining Your Own Manufacturing Business Model',
 
-					list: 'Manufacturing Business Plan Development',
+					list8: 'Manufacturing Business Plan Development',
 				},
 			},
 
@@ -55,21 +55,21 @@ export const coursesObject = [
 				moduleDuration: 'Weeks 4-6',
 
 				moduleList: {
-					list: 'Financial Management for Manufacturers',
+					list1: 'Financial Management for Manufacturers',
 
-					list: 'Other People’s Money (Leveraging OPM)',
+					list2: 'Other People’s Money (Leveraging OPM)',
 
-					list: 'Business Funding Opportunities for Manufacturing Businesses',
+					list3: 'Business Funding Opportunities for Manufacturing Businesses',
 
-					list: 'Factory and Warehousing Setup',
+					list4: 'Factory and Warehousing Setup',
 
-					list: 'Manufacturing Factory Design',
+					list5: 'Manufacturing Factory Design',
 
-					list: 'Regulatory and Compliance Requirements (NAFDAC, SON, FDA)',
+					list6: 'Regulatory and Compliance Requirements (NAFDAC, SON, FDA)',
 
-					list: 'Corporate Governance and Board Formation',
+					list7: 'Corporate Governance and Board Formation',
 
-					list: 'Building a Corporate Culture Rooted in Integrity',
+					list8: 'Building a Corporate Culture Rooted in Integrity',
 				},
 			},
 
@@ -79,25 +79,25 @@ export const coursesObject = [
 				moduleDuration: 'Weeks 7-9',
 
 				moduleList: {
-					list: 'Branding and Brand Positioning',
+					list1: 'Branding and Brand Positioning',
 
-					list: 'Sales Techniques for Manufacturers',
+					list2: 'Sales Techniques for Manufacturers',
 
-					list: 'Marketing Strategy and Market Dominance',
+					list3: 'Marketing Strategy and Market Dominance',
 
-					list: 'Product Pricing Strategies',
+					list4: 'Product Pricing Strategies',
 
-					list: 'Product Design and Prototyping',
+					list5: 'Product Design and Prototyping',
 
-					list: 'Product Innovation',
+					list6: 'Product Innovation',
 
-					list: 'Quality Control and Quality Assurance',
+					list7: 'Quality Control and Quality Assurance',
 
-					list: 'Understanding and Utilizing the Value-Chain',
+					list8: 'Understanding and Utilizing the Value-Chain',
 
-					list: 'Supply Chain and Inventory Management',
+					list9: 'Supply Chain and Inventory Management',
 
-					list: 'Operational Efficiency in Manufacturing',
+					list10: 'Operational Efficiency in Manufacturing',
 				},
 			},
 
@@ -107,19 +107,19 @@ export const coursesObject = [
 				moduleDuration: 'Weeks 10-12',
 
 				moduleList: {
-					list: 'Strategic Partnership and Networking',
+					list1: 'Strategic Partnership and Networking',
 
-					list: 'Outsourcing for Cost Efficiency',
+					list2: 'Outsourcing for Cost Efficiency',
 
-					list: 'Success Planning and Leadership in Manufacturing',
+					list3: 'Success Planning and Leadership in Manufacturing',
 
-					list: 'Growing Your Business through Integrity',
+					list4: 'Growing Your Business through Integrity',
 
-					list: 'AI and Automation in Manufacturing',
+					list5: 'AI and Automation in Manufacturing',
 
-					list: 'Taking Advantage of the AfCFTA for Manufacturers',
+					list6: 'Taking Advantage of the AfCFTA for Manufacturers',
 
-					list: 'Expansion Strategy and Export Planning',
+					list7: 'Expansion Strategy and Export Planning',
 				},
 			},
 		},
@@ -151,6 +151,55 @@ export const coursesObject = [
 
 			method6: 'Internship (Optional but Recommended)',
 		},
+
+		programSummary: {
+			subtext:
+				'The Certified African Manufacturing Entrepreneur (CAME) program by YABSOM gives you the complete roadmap to start and grow a profitable manufacturing business — no matter your background.',
+
+			mainText: {
+				heading: 'The African manufacturing industry is expanding.',
+
+				text1:
+					'This is your opportunity to learn how to create, scale, and lead successful manufacturing companies — the right way.',
+
+				text2:
+					'Through 33 powerful courses, mentorship from real African manufacturers, practical project work, and optional internships, you’ll become a Certified Manufacturing Entrepreneur in just 12 weeks.',
+
+				text3:
+					'Whether you’re starting from zero or already running a small factory — this program is for you!',
+			},
+		},
+
+		whyEnrollment: {
+			point1: 'Master end-to-end manufacturing — from idea to product launch',
+
+			point2: 'Learn factory setup, funding, sales, and marketing secrets',
+
+			point3: 'Understand regulatory compliance (NAFDAC, SON, FDA) with ease',
+
+			point4:
+				'Gain skills in product innovation, quality control, and automation',
+
+			point5:
+				'Build strong networks across Africa&#39;s manufacturing ecosystem',
+
+			point6: 'Prepare for AfCFTA export opportunities',
+
+			point7: 'Graduate with a full business plan and certification!',
+		},
+
+		whoShouldApply: {
+			point1: 'Aspiring Entrepreneurs',
+
+			point2: 'SME Owners',
+
+			point3: 'Production Supervisors &amp; Factory Staff',
+
+			point4: 'Corporate Professionals Seeking Career Shift',
+
+			point5:
+				'Anyone who wants to dominate Africa’s next manufacturing revolution!',
+		},
 	},
 
 	{
@@ -176,23 +225,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module2: {
@@ -200,23 +233,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module3: {
@@ -224,27 +241,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module4: {
@@ -252,21 +249,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 		},
 
@@ -276,25 +259,9 @@ export const coursesObject = [
 			internship: '',
 		},
 
-		graduateCeremony: {
-			list: '',
+		graduateCeremony: {},
 
-			list: '',
-		},
-
-		learningMethods: {
-			method1: '',
-
-			method2: '',
-
-			method3: '',
-
-			method4: '',
-
-			method5: '',
-
-			method6: '',
-		},
+		learningMethods: {},
 	},
 
 	{
@@ -320,23 +287,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module2: {
@@ -344,23 +295,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module3: {
@@ -368,27 +303,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module4: {
@@ -396,21 +311,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 		},
 
@@ -464,23 +365,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module2: {
@@ -488,23 +373,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module3: {
@@ -512,27 +381,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 
 			module4: {
@@ -540,21 +389,7 @@ export const coursesObject = [
 
 				moduleDuration: '',
 
-				moduleList: {
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-
-					list: '',
-				},
+				moduleList: {},
 			},
 		},
 

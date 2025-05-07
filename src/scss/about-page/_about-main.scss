@@ -1,13 +1,13 @@
 @use '../resets';
 
 .about-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: grid;
 	width: 100%;
-	min-height: 130vh;
-	margin-bottom: 7em;
+	min-height: 100vh;
+	margin-bottom: 5em;
+	position: relative;
+	padding-top: 15em;
+	// gap: 10em;
 
 	.layer-blur {
 		position: absolute;
@@ -19,7 +19,6 @@
 		background: resets.$gradient;
 		opacity: 0.4;
 		filter: blur(100px);
-		z-index: 2;
 
 		@media screen and (min-width: 43em) {
 			height: 500px;
@@ -28,109 +27,98 @@
 	}
 
 	.content {
+		margin-bottom: 6em !important;
 		position: relative;
+		z-index: 3;
+		display: grid;
+		gap: 4em;
+
 		@include resets.breakpoints();
 
-		// unsetting the margin top set on the mobile breakpoint
-		@media screen and (min-width: 62em) {
-			padding-top: 10em;
-		}
-		// end of unsetting the margin top
-
-		.main-text-container {
-			position: relative;
-			z-index: 2;
-			.heading {
-				color: resets.$hero-heading-color;
-				font-size: clamp(2rem, 3vw, 4rem);
-				margin-bottom: 0.3em;
-			}
-
-			.sub-text {
-				margin-bottom: 1.5em;
-				color: resets.$dark;
-				line-height: 1.8;
-			}
-		}
-
-		.img-wrap {
-			height: 200px;
+		.text-wrap {
 			width: 100%;
-			// background: red;
-			position: absolute;
-			top: 110%;
-			z-index: -4 !important;
+			text-align: center;
 
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: center;
+			.heading {
+				margin-bottom: 0.6em;
+				font-size: resets.$heading-font-size;
+				color: resets.$hero-heading-color;
+				font-size: 2.5rem;
 			}
-		}
-
-		.wrap {
-			// position: absolute;
 
 			.sub-text {
-				margin-bottom: 1.5em;
+				margin-bottom: 2em;
 				color: resets.$dark;
 				line-height: 1.8;
 			}
-			.btn-wrap {
-				display: flex;
-				gap: 0.8em;
 
+			.btn-wrap {
 				.btn {
 					@include resets.primary-btn();
+					width: 100%;
 				}
+			}
+		}
+
+		.bg-img-wrap {
+			width: 100%;
+			height: 300px;
+			border-radius: 30px;
+
+			.img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			gap: 3em;
+			margin-bottom: 7em !important;
+
+			.text-wrap {
+				text-align: left;
+				padding-top: 4em;
+
+				.btn-wrap {
+					.btn {
+						width: unset;
+					}
+				}
+			}
+
+			.bg-img-wrap {
+				height: 500px;
+			}
+		}
+	}
+
+	.boldtext-wrap {
+		@include resets.breakpoints();
+
+		.text {
+			font-size: 1.5rem;
+			line-height: 1.9;
+			text-align: center;
+
+			span {
+				@include resets.text-gradient();
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 70%;
+
+			.text {
+				font-size: 2.5rem;
+				text-align: center;
+				line-height: 1.5;
 			}
 		}
 	}
 
 	@media screen and (min-width: 62em) {
-		min-height: 140vh;
-		display: block;
-		margin-bottom: 13em;
-		position: relative;
-
-		.triangle-wrap {
-			position: absolute;
-			top: 0;
-			left: 20%;
-			z-index: 1;
-			width: 550px;
-			height: 700px;
-			background: #fff;
-			transform: rotate(45deg);
-			border-right: solid 2px red;
-		}
-
-		.content {
-			padding-top: 13em;
-
-			.main-text-container {
-				max-width: 600px;
-			}
-
-			.img-wrap {
-				right: 0;
-				width: 500px;
-				height: 400px;
-			}
-
-			.wrap {
-				position: absolute;
-				top: 220%;
-				max-width: 600px;
-				text-align: right;
-				right: 0;
-
-				.btn-wrap {
-					display: flex;
-					justify-content: flex-end;
-				}
-			}
-		}
+		padding-top: 15em;
 	}
 }

@@ -2,7 +2,7 @@
 
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
 
 // ideas in random places
 
@@ -77,6 +77,27 @@ button {
 	img {
 		height: 100%;
 		width: 100%;
+	}
+
+	@media screen and (min-width: 62em) {
+	}
+}
+
+@mixin layerBlur() {
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	top: 20%;
+	left: 10%;
+	background: $gradient;
+	opacity: 0.2;
+	filter: blur(100px);
+	// display: none;
+
+	@media screen and (min-width: 43em) {
+		height: 500px;
+		width: 500px;
 	}
 }
 
@@ -155,7 +176,7 @@ button {
 	}
 
 	@media screen and (min-width: 62em) {
-		width: 80%;
+		width: 90%;
 	}
 }
 

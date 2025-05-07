@@ -10,7 +10,7 @@ const config = {
 export const smoothScrollToPrograms = () => {
 	const observer = new MutationObserver((entries) => {
 		entries.forEach((entry) => {
-			console.log('entry', entry);
+			// console.log('entry', entry);
 
 			const programLink = entry.target.querySelector('.program-link');
 
@@ -26,9 +26,8 @@ export const smoothScrollToPrograms = () => {
 
 			if (home) {
 				setTimeout(() => {
-					window.location.href = '/#programs';
-
 					home.classList.remove('home');
+					window.location.href = '/#programs';
 				}, 1000);
 			} else return;
 

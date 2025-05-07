@@ -2,76 +2,77 @@
 
 .admissions-section {
 	margin-bottom: 7em;
+	// background: #7a7d82;
+	background: teal;
+	padding: 4em 0;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		width: 100px;
+
+		&:nth-child(1) {
+			right: 20%;
+			width: 50px;
+			filter: blur(2px);
+		}
+
+		&:nth-child(2) {
+			right: 7%;
+			top: 50%;
+			filter: blur(2px);
+		}
+
+		&:nth-child(3) {
+			left: 10%;
+			top: 20%;
+			width: 70px;
+			filter: blur(2px);
+			transform: rotate(-40deg);
+		}
+
+		&:nth-child(4) {
+			left: 20%;
+			top: 45%;
+			filter: blur(2px);
+			transform: rotate(40deg);
+		}
+
+		&:nth-child(5) {
+			left: 6%;
+			top: 70%;
+			filter: blur(2px);
+			transform: rotate(40deg);
+		}
+	}
 
 	.container {
 		min-height: 410px;
-		background: resets.$dark;
-
 		position: relative;
-		display: grid;
-		// gap: 3em;
-		@include resets.breakpoints();
+		width: 90%;
+		margin: 0 auto;
 
 		.text-wrap {
-			color: resets.$light;
 			max-width: 550px;
 			padding: 3em;
+			margin: 0 auto;
+			text-align: center;
+			color: resets.$light;
 
 			.heading {
 				font-size: resets.$heading-font-size;
-				max-width: 350px;
 				margin-bottom: 0.6em;
 			}
 
 			.sub-text {
-				margin-bottom: 1.5em;
+				margin-bottom: 2.7em;
 				line-height: resets.$line-height;
+				color: resets.$light;
 			}
 
 			.btn {
 				@include resets.primary-btn();
-			}
-		}
-
-		.img-wrap {
-			position: relative;
-
-			&::before {
-				content: '';
-				position: absolute;
-				height: 300px;
-				width: 90%;
-				background: resets.$light;
-				left: 5%;
-			}
-
-			img {
-				width: 100%;
-				position: relative;
-				z-index: 1;
-			}
-		}
-
-		@media screen and (min-width: 62em) {
-			display: flex;
-
-			.text-wrap {
-				padding-left: 4em;
-			}
-
-			.img-wrap {
-				position: absolute;
-				right: 0;
-				bottom: -7px !important;
-
-				&::before {
-					height: 250px;
-					top: 30%;
-				}
-
-				img {
-					width: 450px;
-				}
 			}
 		}
 	}

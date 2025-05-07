@@ -9,7 +9,7 @@ import { smoothScrollToPrograms } from './app/script';
 import { fetchCourses } from './app/fetch-course';
 import { loadCourseData } from './app/load-course';
 
-smoothScrollToPrograms();
+// smoothScrollToPrograms();
 
 loadNavbar();
 loadFooterTemplate();

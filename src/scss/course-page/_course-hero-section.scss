@@ -1,29 +1,19 @@
 @use '../resets';
 
+// the background images styles properties are inside the resets partial
+
 .course-hero-section {
 	// background: red;
 	position: relative;
 	z-index: 1;
-	padding-top: 10em;
+	padding-top: 13em;
+	margin-bottom: 7em;
 
 	.container {
 		@include resets.breakpoints();
 
-		.course-art {
-			background: resets.$dark;
-			height: 400px;
-			width: 100%;
-			margin-bottom: 1em;
-
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-
 		.course-heading-wrap {
-			margin-bottom: 2.9em;
+			margin-bottom: 2em;
 			max-width: 600px;
 
 			.course-title {
@@ -34,6 +24,19 @@
 			.sub-title {
 				color: resets.$p-text-color;
 				font-weight: normal;
+			}
+		}
+
+		.course-art {
+			background: resets.$dark;
+			height: 200px;
+			width: 100%;
+			margin-bottom: 2.5em;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 
@@ -69,5 +72,41 @@
 		@media screen and (min-width: 62em) {
 			width: 70%;
 		}
+	}
+}
+
+.certified-wrap {
+	background: teal;
+	min-height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow-y: hidden;
+	padding: 4em 0;
+
+	.wrap {
+		max-width: 700px;
+
+		.heading {
+			font-size: resets.$heading-font-size;
+			color: resets.$light;
+			margin-bottom: 0.5em;
+		}
+
+		.subheading {
+			margin-bottom: 2em;
+			color: resets.$light;
+		}
+
+		.enrol-btn {
+			@include resets.primary-btn();
+		}
+	}
+
+	.pos-svg {
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 }

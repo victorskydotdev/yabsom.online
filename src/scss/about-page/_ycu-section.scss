@@ -1,7 +1,7 @@
 @use '../resets';
 
 .ycu-section {
-	padding: 7em 0 7em 0;
+	padding: 2em 0 7em 0;
 	position: relative;
 
 	&::before {
@@ -9,7 +9,6 @@
 		position: absolute;
 		height: 2px;
 		width: 100%;
-
 		top: 100%;
 		left: 0;
 		background: resets.$gradient;
@@ -33,7 +32,7 @@
 				@media screen and (min-width: 62em) {
 					// all: unset;
 					margin: unset;
-					margin-left: 10%;
+					margin-left: 5%;
 					width: 500px;
 				}
 			}
@@ -48,6 +47,7 @@
 			gap: 1em;
 			padding-bottom: 1em;
 			scroll-snap-type: x mandatory;
+			padding-left: 2em;
 
 			.card {
 				scroll-snap-align: start;
@@ -93,7 +93,7 @@
 				grid-auto-columns: 30%;
 				scroll-snap-type: unset;
 
-				padding-left: 10%;
+				padding-left: 5%;
 			}
 		}
 	}

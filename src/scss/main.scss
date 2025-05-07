@@ -8,6 +8,7 @@
 @use './landing/programs-section';
 @use './landing/cert-section';
 @use './landing/admissions-section';
+@use './events/events-news-section';
 @use './landing/trust-section';
 @use './footer';
 
@@ -24,3 +25,7 @@
 
 // course page
 @use './course-page/course-hero-section';
+
+// contact form
+@use './contact-page/contact-main';
+@use './contact-page/contact-form';

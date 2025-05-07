@@ -3,7 +3,7 @@ const facultyMemberContainer = document.querySelector('.faculty-main');
 const loadspinModal = document.querySelector('.loadspin-modal');
 
 export const fetchFacultyMembers = () => {
-	console.log('facultyMembers', facultyMembers);
+	// console.log('facultyMembers', facultyMembers);
 
 	// initialize the see bio buttons
 	const seeBioButtons = document.querySelectorAll('.member-btn');

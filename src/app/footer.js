@@ -42,8 +42,7 @@ const footerTemplate = () => {
         <h4 class="heading">Resources</h4>
 
         <ul class="footer-nav">
-          <li><a href="" class="link">Registration</a></li>
-          <li><a href="" class="link">Admissions us</a></li>
+          <li><a href="/admissions.html" class="link">Admissions</a></li>
           <li><a href="/privacy-policy.html" class="link">Privacy policy</a></li>
           <li><a href="/terms.html" class="link">Terms of service</a></li>
         </ul>
