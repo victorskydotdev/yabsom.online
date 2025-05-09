@@ -8,11 +8,43 @@ export const loadCourseData = () => {
 		const data = JSON.parse(courseData);
 
 		courseWrap.innerHTML = layoutTemplate(data);
+
+		console.log(data);
+
+		const programHighlight = document.querySelector('.program-highlight');
+
+		const durationHighlight = document.querySelector('.duration-highlight');
+
+		if (!data && programHighlight) {
+			alert('Go back to programs');
+		} else {
+			const courseTitle = data.courseTitle;
+
+			const course1 =
+				'Certified African Manufacturing Entrepreneur (CAME) Program';
+			const course2 = 'Certificate in Lean Manufacturing';
+			const course3 = 'Advanced Manufacturing Leadership Program';
+			const course4 = 'Entrepreneurship in Manufacturing';
+
+			if (courseTitle === course1) {
+				programHighlight.innerHTML =
+					'Become a Certified African Manufacturing Entreprenuer in just 3 months';
+			} else if (courseTitle === course2) {
+				programHighlight.innerHTML =
+					'Earn a Certificate in Manufacturing in 4 weeks';
+			} else if (courseTitle === course3) {
+				programHighlight.innerHTML =
+					'Earn the Advanced Manufacturing Leadership Certificate in 6 weeks';
+			} else {
+				programHighlight.innerHTML =
+					'Get Certified with Entrepreneurship in Manufacturing Certificate';
+			}
+		}
 	}
 };
 
 // helper function 1
-const checkForEmptyVals = (val) => val ?? 'data not coming through';
+const checkForEmptyVals = (val) => val ?? '';
 // end of helper function 1
 
 const layoutTemplate = (callback) => {
@@ -36,16 +68,16 @@ const layoutTemplate = (callback) => {
 						<h4 class="heading">Program Overview</h4>
 
 						<div class="wrap">
-							<p class="text"><i class="fa-solid fa-clock"></i> Duration: ${checkForEmptyVals(
+							<p class="text"><i class="fa-solid fa-clock"></i> <span class="highlight">Duration</span>: ${checkForEmptyVals(
 								callback.programOverview.duration
 							)}</p>
-							<p class="text"><i class="fa-solid fa-globe"></i> Format: ${checkForEmptyVals(
+							<p class="text"><i class="fa-solid fa-globe"></i> <span class="highlight">Learning Mode</span>: ${checkForEmptyVals(
 								callback.programOverview.format
 							)}</p>
-							<p class="text"><i class="fa-solid fa-graduation-cap"></i> Certification: ${checkForEmptyVals(
+							<p class="text"><i class="fa-solid fa-graduation-cap"></i><span class="highlight">Certification</span>: ${checkForEmptyVals(
 								callback.programOverview.certification
 							)}</p>
-							<p class="text"><i class="fa-solid fa-compass"></i> Structure: ${checkForEmptyVals(
+							<p class="text"><i class="fa-solid fa-compass"></i> <span class="highlight">Structure</span>: ${checkForEmptyVals(
 								callback.programOverview.structure
 							)}</p>
 						</div>
@@ -225,3 +257,8 @@ const layoutTemplate = (callback) => {
 			</div>
   `;
 };
+
+// Certified African Manufacturing Entrepreneur
+// Certificate in Lean Manufacturing
+// Advanced Manufacturing Leadership Program
+// Entrepreneurship in Manufacturing

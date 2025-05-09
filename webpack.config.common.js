@@ -16,28 +16,28 @@ module.exports = {
 			template: './src/index.html',
 			filename: 'index.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 
 		new HtmlWebpackPlugin({
 			template: './src/html/about.html',
 			filename: 'about.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 
 		new HtmlWebpackPlugin({
 			template: './src/html/admission.html',
 			filename: 'admission.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 
 		new HtmlWebpackPlugin({
 			template: './src/html/contact.html',
 			filename: 'contact.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 
 		// for the dynamic rendering of the individual faculty members
@@ -45,7 +45,7 @@ module.exports = {
 			template: './src/html/faculty-bio.html',
 			filename: 'faculty-bio.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 
 		// for dynamic rendering of the individual course object(data)
@@ -53,7 +53,7 @@ module.exports = {
 			template: './src/html/course.html',
 			filename: 'course.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 
 		// privacy policy page
@@ -61,7 +61,7 @@ module.exports = {
 			template: './src/html/privacy-policy.html',
 			filename: 'privacy-policy.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 
 		// terms of service page
@@ -69,7 +69,7 @@ module.exports = {
 			template: './src/html/terms.html',
 			filename: 'terms.html',
 			chunks: ['main'],
-			favicon: './src/assets/brand-logo.png',
+			favicon: './src/assets/favicon.png',
 		}),
 	],
 

@@ -206,22 +206,25 @@ export const coursesObject = [
 		id: 2,
 		courseTitle: 'Certificate in Lean Manufacturing',
 
-		subTitle: '',
+		subTitle:
+			'The Certificate in Lean Manufacturing is a short, hands-on course aimed at helping African manufacturers optimize their production processes, reduce waste, and increase profitability through the principles of lean thinking. This program is ideal for factory managers, operations leads, and process engineers seeking operational excellence.',
 
 		image: img2,
 
 		programOverview: {
-			duration: '',
-			format: '',
-			certification: '',
-			structure: '',
+			duration: '4 weeks',
+			format: 'Hybrid (online + 1-day physical workshop)',
+			certification:
+				'Solely by YABSOM (future institutional partnerships planned)',
+			structure:
+				'Lectures, Case Studies, Project Work, Internship, and Graduation',
 		},
 
 		programStructure: '',
 
 		courseModules: {
 			module1: {
-				title: '',
+				title: 'Introduction to Lean Thinking & African Manufacturing Context',
 
 				moduleDuration: '',
 
@@ -229,25 +232,25 @@ export const coursesObject = [
 			},
 
 			module2: {
-				title: '',
+				title: 'Value Stream Mapping & Waste Elimination',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
 
 			module3: {
-				title: '',
+				title: '5S, Kaizen & Continuous Improvement',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
 
 			module4: {
-				title: '',
+				title: 'Lean Implementation Planning + Workshop Day',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
@@ -268,38 +271,41 @@ export const coursesObject = [
 		id: 3,
 		courseTitle: 'Advanced Manufacturing Leadership Program',
 
-		subTitle: '',
+		subTitle:
+			'The Advanced Manufacturing Leadership Program is designed for senior managers, business owners, and manufacturing executives. It focuses on leadership, innovation, strategy, and digital transformation in manufacturing. The program helps leaders future-proof their operations and build high-performing teams in a competitive global environment.',
 
 		image: img3,
 
 		programOverview: {
-			duration: '',
-			format: '',
-			certification: '',
-			structure: '',
+			duration: '6 weeks',
+			format: 'Hybrid (Online classes + 2-day executive retreat)',
+			certification:
+				'Solely by YABSOM (future institutional partnerships planned)',
+			structure:
+				'Lectures, Case Studies, Project Work, Internship, and Graduation',
 		},
 
 		programStructure: '',
 
 		courseModules: {
 			module1: {
-				title: '',
+				title: 'Strategic Thinking for Manufacturing Leaders',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
 
 			module2: {
-				title: '',
+				title: 'Leading Change & Organizational Culture',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
 
 			module3: {
-				title: '',
+				title: 'Innovation, R&D, and Smart Manufacturing',
 
 				moduleDuration: '',
 
@@ -307,9 +313,25 @@ export const coursesObject = [
 			},
 
 			module4: {
-				title: '',
+				title: 'Human Capital & Performance Management',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
+
+				moduleList: {},
+			},
+
+			module5: {
+				title: 'Financial Intelligence for Manufacturing Executives',
+
+				moduleDuration: '1 week',
+
+				moduleList: {},
+			},
+
+			module6: {
+				title: 'Boardroom Simulations + 2-Day Leadership Retreat',
+
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
@@ -351,43 +373,61 @@ export const coursesObject = [
 		image: img1,
 
 		programOverview: {
-			duration: '',
-			format: '',
-			certification: '',
-			structure: '',
+			duration: '6 weeks',
+			format: 'Online',
+			certification:
+				'Solely by YABSOM (future institutional partnerships planned)',
+			structure:
+				'Lectures, Case Studies, Project Work, Internship, and Graduation',
 		},
 
 		programStructure: '',
 
 		courseModules: {
 			module1: {
-				title: '',
+				title: 'The Entrepreneurial Mindset for Manufacturers',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
 
 			module2: {
-				title: '',
+				title: 'Market Research & Opportunity Discovery',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
 
 			module3: {
-				title: '',
+				title: 'Product Design and Minimum Viable Product (MVP)',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},
 
 			module4: {
-				title: '',
+				title: 'Sourcing, Tools & Setting up Production',
 
-				moduleDuration: '',
+				moduleDuration: '1 week',
+
+				moduleList: {},
+			},
+
+			module5: {
+				title: 'Building a Team, Branding & Distribution',
+
+				moduleDuration: '1 week',
+
+				moduleList: {},
+			},
+
+			module5: {
+				title: 'Pitching, Partnerships & Access to Capital',
+
+				moduleDuration: '1 week',
 
 				moduleList: {},
 			},

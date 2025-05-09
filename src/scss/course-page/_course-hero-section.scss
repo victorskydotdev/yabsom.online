@@ -24,6 +24,7 @@
 			.sub-title {
 				color: resets.$p-text-color;
 				font-weight: normal;
+				line-height: 2;
 			}
 		}
 
@@ -64,6 +65,12 @@
 						display: inline-block;
 						margin-right: 0.5em;
 						@include resets.text-gradient();
+					}
+
+					.highlight {
+						font-weight: 500;
+						@include resets.text-gradient();
+						font-size: 0.9rem;
 					}
 				}
 			}
@@ -133,6 +140,7 @@
 
 		img {
 			height: 100%;
+			// width: 100%;
 		}
 	}
 }

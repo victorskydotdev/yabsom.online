@@ -1,0 +1,114 @@
+@use '../resets';
+
+.reg-form-modal {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	gap: 1.5em;
+
+	background: resets.$light;
+	z-index: 4;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease-in;
+	overflow-y: auto;
+
+	.content {
+		width: 100%;
+		padding: 2em;
+
+		.brand-wrap {
+			margin-bottom: 2em;
+			img {
+				width: 100px;
+			}
+		}
+
+		.form-heading {
+			margin-bottom: 0.5em;
+			font-size: 1.5rem;
+		}
+
+		.subtext {
+			margin-bottom: 2em;
+		}
+
+		.form {
+			// background: teal;
+			display: grid;
+
+			.wrap {
+				display: grid;
+
+				.sub-wrap {
+					display: grid;
+
+					label {
+						margin-bottom: 0;
+						font-size: 0.8rem;
+					}
+
+					input {
+						border: none;
+						border-bottom: 1px solid resets.$p-text-color;
+						background: transparent;
+						padding: 0.8em 1em;
+						outline: none;
+					}
+				}
+
+				&:nth-child(1) {
+					.sub-wrap {
+						margin-bottom: 1.5em;
+					}
+				}
+
+				&:nth-child(2) {
+					.sub-wrap {
+						margin-bottom: 1.5em;
+					}
+				}
+
+				&:nth-child(3) {
+					margin-bottom: 1.8em;
+
+					p {
+						margin-bottom: 0.5em;
+					}
+
+					.sub-wrap {
+						display: flex;
+						gap: 1em;
+					}
+				}
+			}
+
+			.btn-wrap {
+				.submit-btn {
+					@include resets.primary-btn();
+				}
+			}
+		}
+	}
+
+	.img-wrap {
+		height: 100%;
+		width: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		display: flex;
+	}
+}
+
+.show-reg-form {
+	opacity: 1;
+	visibility: visible;
+}

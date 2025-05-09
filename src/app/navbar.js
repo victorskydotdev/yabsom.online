@@ -47,6 +47,9 @@ export const loadNavbar = () => {
 	if (headerNavWrap) {
 		headerNavWrap.innerHTML = navbarTemplate();
 
+		const navBtn = document.querySelector('.btn-primary');
+		const navRegModal = document.querySelector('.nav-reg-btn-modal');
+
 		const modifyNavBg = () => {
 			window.addEventListener('scroll', () => {
 				if (window.scrollY >= 200) {
@@ -54,6 +57,35 @@ export const loadNavbar = () => {
 				} else headerNavWrap.classList.remove('add-nav-bg');
 			});
 		};
+
+		if (navBtn) {
+			// const template = `
+			//   <div class="content">
+			//     <h4 class="heading">Please select program first!</h4>
+
+			//     <button class="go-to-programs">Go to programs</button>
+			//   </div>
+			// `;
+
+			navBtn.addEventListener('click', () => {
+				window.location.href = '/admission.html';
+				// navRegModal.classList.add('show-nav-btn-modal');
+
+				// navRegModal.innerHTML = template;
+
+				// const gotoProgBtn = document.querySelector('.go-to-programs');
+
+				// if (gotoProgBtn) {
+				// 	console.log('Hello world/family');
+
+				// 	gotoProgBtn.addEventListener('click', () => {
+				// 		navRegModal.classList.remove('show-nav-btn-modal');
+
+				// 		window.location.href = '/#programs';
+				// 	});
+				// }
+			});
+		}
 
 		modifyNavBg();
 	}

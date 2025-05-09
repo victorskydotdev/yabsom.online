@@ -21,7 +21,8 @@
 @use './terms-privacy/styles';
 
 @use './faculty-bio';
-@use './registration-form';
+@use './course-page/registration-form';
+@use './nab-reg-btn-modal';
 
 // course page
 @use './course-page/course-hero-section';

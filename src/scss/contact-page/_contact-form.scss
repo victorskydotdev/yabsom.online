@@ -1,55 +1,70 @@
 @use '../resets';
 
 @mixin form-wrap() {
-	// background: orange;
-	// height: 700px;
-
 	.form {
-		// background: teal;
-
 		.heading {
-			// font-size: 2rem;
 			margin-bottom: 1.5em;
 		}
 
-		.wrap {
-			// gap: 1.5em;
-
-			.name-wrap {
-				display: grid;
-				gap: 1.4em;
-				// background: teal;
-			}
-		}
-
-		.wrap {
+		.input-field-area {
 			display: grid;
-			label {
-				margin-bottom: 1em;
+			gap: 1em;
+			margin-bottom: 3em;
+
+			.username-wrap {
+				display: grid;
+				gap: 1em;
+
+				.name-wrap {
+					display: grid;
+					// gap: 0.5em;
+					width: 100%;
+
+					label {
+						margin-bottom: 0;
+						font-size: 0.8rem;
+					}
+
+					input {
+						border: none;
+						border-bottom: 1px solid resets.$p-text-color;
+						background: transparent;
+						padding: 0.8em 1em;
+						outline: none;
+					}
+				}
+
+				@media screen and (min-width: 62em) {
+					display: flex;
+				}
 			}
 
-			input {
-				border: none;
-				border-bottom: 1px solid red;
-			}
+			.wrap {
+				display: grid;
 
-			textarea {
-				border: none;
-				height: 80px;
-				border-bottom: 1px solid red;
-			}
+				label {
+					font-size: 0.8rem;
+				}
 
-			&:nth-child(2) {
-				margin-bottom: 1.4em;
-			}
-			&:nth-child(3) {
-				margin-bottom: 1.4em;
-			}
-			&:nth-child(4) {
-				margin-bottom: 1.4em;
-			}
-			&:nth-child(5) {
-				margin-bottom: 2em;
+				input {
+					border: none;
+					border-bottom: 1px solid resets.$p-text-color;
+					background: transparent;
+					padding: 0.8em 1em;
+					outline: none;
+
+					&:active {
+						outline: none;
+					}
+				}
+
+				textarea {
+					border: none;
+					height: 80px;
+					border-bottom: 1px solid resets.$p-text-color;
+					outline: none;
+					margin-top: 0.5em;
+				}
 			}
 		}
 
