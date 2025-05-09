@@ -1,0 +1,36 @@
+@use '../resets';
+
+.admission-hero {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+	.layer-blur {
+		@include resets.layer-blur();
+	}
+
+	.container {
+		text-align: center;
+		@include resets.breakpoints();
+
+		.heading {
+			color: resets.$hero-heading-color;
+			font-size: clamp(2rem, 3vw, 4rem);
+			max-width: 600px;
+			margin: 0 auto;
+			margin-bottom: 0.3em;
+		}
+
+		.sub-text {
+			max-width: 600px;
+			margin: 0 auto;
+			margin-bottom: 1.9em;
+		}
+
+		.btn-wrap {
+			.btn {
+				@include resets.primary-btn();
+			}
+		}
+	}
+}
