@@ -17,9 +17,9 @@ const navbarTemplate = () => {
         <li class="nav-item">
           <a href="/#programs" class="nav-link program-link">Programs</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="#" class="nav-link">Resources</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a href="/admission.html" class="nav-link">Admissions</a>
         </li>

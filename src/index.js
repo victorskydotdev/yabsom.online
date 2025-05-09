@@ -10,6 +10,8 @@ import { fetchCourses } from './app/fetch-course';
 import { loadCourseData } from './app/load-course';
 import { handleFormSubmission } from './app/reg-form';
 
+import { triggerPageTransitions } from './app/page-transition';
+
 // smoothScrollToPrograms();
 
 loadNavbar();
@@ -19,3 +21,7 @@ fetchFacultyMembers();
 fetchCourses();
 loadCourseData();
 handleFormSubmission();
+
+window.addEventListener('DOMContentLoaded', () => {
+	triggerPageTransitions();
+});
