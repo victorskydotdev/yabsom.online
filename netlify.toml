@@ -3,3 +3,6 @@
 command = "npm run build"
 functions = "netlify/functions"
 publish = "dist"
+
+[secrets_scanning]
+omit_paths = ["src/html/privacy-policy.html", "src/html/terms.html"]
