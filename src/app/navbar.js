@@ -11,24 +11,35 @@ const navbarTemplate = () => {
       </div>
 
       <ul class="nav-list">
-        <li class="nav-item">
-          <a href="/" class="nav-link program-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="/#programs" class="nav-link program-link">Programs</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a href="#" class="nav-link">Resources</a>
-        </li> -->
-        <li class="nav-item">
-          <a href="/admission.html" class="nav-link">Admissions</a>
-        </li>
-        <li class="nav-item">
-          <a href="/about.html" class="nav-link">About us</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Events & News</a>
-        </li>
+        <div class="nav-wrap">
+          <li class="nav-item">
+            <a href="/" class="nav-link program-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/#programs" class="nav-link program-link">Programs</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link">Resources</a>
+          </li> -->
+
+          <li class="nav-item">
+            <a href="/admission.html" class="nav-link">Admissions</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/about.html" class="nav-link">About us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Events & News</a>
+          </li>
+
+          <span class="close-mobile-nav">
+            <i class="fi fi-ss-angle-right"></i>
+          </span>
+        </div>
       </ul>
 
       <div class="nav-btn">
@@ -48,7 +59,9 @@ export const loadNavbar = () => {
 		headerNavWrap.innerHTML = navbarTemplate();
 
 		const navBtn = document.querySelector('.btn-primary');
-		const navRegModal = document.querySelector('.nav-reg-btn-modal');
+		const burgerBtn = document.querySelector('.hamburger');
+		const closeNavBtn = document.querySelector('.close-mobile-nav');
+		const mobileNav = document.querySelector('.nav-list');
 
 		const modifyNavBg = () => {
 			window.addEventListener('scroll', () => {
@@ -57,36 +70,30 @@ export const loadNavbar = () => {
 				} else headerNavWrap.classList.remove('add-nav-bg');
 			});
 		};
+		modifyNavBg();
 
+		// redirect to admission page logic
 		if (navBtn) {
-			// const template = `
-			//   <div class="content">
-			//     <h4 class="heading">Please select program first!</h4>
-
-			//     <button class="go-to-programs">Go to programs</button>
-			//   </div>
-			// `;
-
 			navBtn.addEventListener('click', () => {
 				window.location.href = '/admission.html';
-				// navRegModal.classList.add('show-nav-btn-modal');
-
-				// navRegModal.innerHTML = template;
-
-				// const gotoProgBtn = document.querySelector('.go-to-programs');
-
-				// if (gotoProgBtn) {
-				// 	console.log('Hello world/family');
-
-				// 	gotoProgBtn.addEventListener('click', () => {
-				// 		navRegModal.classList.remove('show-nav-btn-modal');
-
-				// 		window.location.href = '/#programs';
-				// 	});
-				// }
 			});
 		}
 
-		modifyNavBg();
+		// mobile menu logic
+		const triggerMobileNav = () => {
+			if (!burgerBtn) {
+				return;
+			} else {
+				burgerBtn.addEventListener('click', () => {
+					// alert('button clicked');
+					mobileNav.classList.add('show-nav');
+					closeNavBtn.addEventListener('click', () => {
+						mobileNav.classList.remove('show-nav');
+					});
+				});
+			}
+		};
+
+		triggerMobileNav();
 	}
 };

@@ -33,7 +33,7 @@ export const expandPresAddress = () => {
 					</p>
 
 					<div class="btn-container">
-						<button class="btn-close" id="btn-close">Close</button>
+						<button class="btn-close" id="btn-close">Continue to site</button>
 					</div>
 				</div>
 			</div>
