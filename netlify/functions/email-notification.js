@@ -21,8 +21,6 @@ exports.handler = async (event) => {
 		yabsomEmail,
 	} = formData;
 
-	console.log(formData.yabsomEmail);
-
 	const DOMAIN = process.env.MAILGUN_DOMAIN;
 
 	const mg = mailgun({
