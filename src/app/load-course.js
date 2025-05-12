@@ -9,7 +9,7 @@ export const loadCourseData = () => {
 
 		courseWrap.innerHTML = layoutTemplate(data);
 
-		console.log(data);
+		// console.log(data);
 
 		const programHighlight = document.querySelector('.program-highlight');
 

@@ -1,7 +1,7 @@
 @use '../resets';
 
 .ycu-section {
-	padding: 2em 0 7em 0;
+	padding: 2em 0 4em 0;
 	position: relative;
 
 	&::before {
@@ -48,6 +48,7 @@
 			padding-bottom: 1em;
 			scroll-snap-type: x mandatory;
 			padding-left: 2em;
+			padding-bottom: 6em;
 
 			.card {
 				scroll-snap-align: start;

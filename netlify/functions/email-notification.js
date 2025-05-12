@@ -1,40 +1,84 @@
-// const Mailgun = require('mailgun-js');
+const mailgun = require('mailgun-js');
 
 exports.handler = async (event) => {
-	if (event.httpMethod !== 'POST') {
-		return {
-			statusCode: 405,
-			body: JSON.stringify({ message: 'Method not allowed' }),
-		};
-	}
-
-	// const { name, email, message } = JSON.parse(event.body);
 	const formData = JSON.parse(event.body);
 
-	if (!formData) {
-		return {
-			statusCode: 400,
-			body: JSON.stringify({ message: 'Missing required fields' }),
-		};
-	}
+	const {
+		firstName,
+		lastName,
+		email,
+		registrationId,
+		dob,
+		gender,
+		phone,
+		nationality,
+		cor,
+		state,
+		cityTown,
+		highestQualification,
+		currentlyRunABusiness,
+		consent,
+		yabsomEmail,
+	} = formData;
 
-	// const { name, email, message } = formData;
+	console.log(formData.yabsomEmail);
 
-	// const data = {
-	// 	from: FROM_EMAIL_ADDRESS,
-	// 	to: CONTACT_TO_EMAIL_ADDRESS,
-	// 	subject: `New message from ${name}`,
-	// 	text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-	// };
+	const DOMAIN = process.env.MAILGUN_DOMAIN;
+
+	const mg = mailgun({
+		apiKey: process.env.MAILGUN_API_KEY,
+		domain: DOMAIN,
+	});
+
+	const notificationData = {
+		from: 'Yabsom <postmaster@yabsom.school>',
+		to: yabsomEmail,
+		subject: 'New Student Reg Notification',
+		text: `Hello Admin, 
+
+		Below is the registration details of ${firstName} ${lastName}.
+
+    Registration Id: ${registrationId},
+
+    Email: ${email},
+    Phone: ${phone},
+    Date of Birth: ${dob},
+    Gender: ${gender},
+    Nationality: ${nationality},
+    Country of Residence: ${cor},
+    State: ${state},
+    City/Town: ${cityTown},
+    Highest Qualification: ${highestQualification},
+    Currently Running a Business: ${currentlyRunABusiness},
+    Consent Given: ${consent}.
+		`,
+	};
+
+	const autoresponseData = {
+		from: 'Yabsom.school <postmaster@yabsom.school>',
+		to: email,
+		subject: 'Registration Successful!',
+		text: `Hello ${firstName} ${lastName}, 
+
+		Your registration is successful and is being verified by our team.
+
+		You'll receive another email as soon as verification is compplete.
+
+    Your Registration Id: ${registrationId}, please keep this safe as this would be used to validate your registration in the future.    
+		`,
+	};
 
 	try {
-		// await mailgun.messages().send(data);
-		console.log(formData);
+		await mg.messages().send(notificationData);
+		await mg.messages().send(autoresponseData);
+
 		return {
 			statusCode: 200,
-			body: JSON.stringify({ message: 'Email sent successfully' }),
+			body: JSON.stringify({ message: 'YABSOM Admin notified successfully!' }),
 		};
 	} catch (error) {
+		console.error('Mailgun error:', error);
+
 		return {
 			statusCode: 500,
 			body: JSON.stringify({ message: 'Error sending email', error }),

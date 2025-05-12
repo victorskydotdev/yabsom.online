@@ -85,7 +85,7 @@ const footerTemplate = () => {
 
 export const loadFooterTemplate = () => {
 	if (!footer) {
-		alert('Footer element not on this page');
+		return;
 	} else {
 		footer.innerHTML = footerTemplate();
 	}

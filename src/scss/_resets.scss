@@ -84,6 +84,43 @@ button {
 	}
 }
 
+.loadspin-modal {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: rgba(0, 0, 0, 0.733);
+	z-index: 4;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease-in;
+
+	.wrap {
+		text-align: center;
+		color: $light;
+
+		.fa-spinner {
+			font-size: 3em;
+			color: $light;
+			margin-bottom: 0.6em;
+		}
+
+		.loading-text {
+			color: $light;
+		}
+	}
+}
+
+.show-loading {
+	opacity: 1;
+	visibility: visible;
+	// transition: all 0.5s ease-in;
+}
+
 @mixin layerBlur() {
 	position: absolute;
 	height: 300px;

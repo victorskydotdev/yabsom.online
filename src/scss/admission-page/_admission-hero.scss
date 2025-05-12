@@ -1,9 +1,12 @@
 @use '../resets';
 
 .admission-hero {
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
+	padding-top: 15em;
+	overflow-x: hidden;
+	margin-bottom: 7em;
 
 	.layer-blur {
 		@include resets.layer-blur();
@@ -11,25 +14,57 @@
 
 	.container {
 		text-align: center;
-		@include resets.breakpoints();
 
-		.heading {
-			color: resets.$hero-heading-color;
-			font-size: clamp(2rem, 3vw, 4rem);
-			max-width: 600px;
-			margin: 0 auto;
-			margin-bottom: 0.3em;
+		.text-wrap {
+			@include resets.breakpoints();
+
+			.heading {
+				color: resets.$hero-heading-color;
+				font-size: clamp(2rem, 3vw, 4rem);
+				max-width: 600px;
+				margin: 0 auto;
+				margin-bottom: 0.3em;
+			}
+
+			.sub-text {
+				max-width: 600px;
+				margin: 0 auto;
+				margin-bottom: 1.9em;
+			}
+
+			.btn-wrap {
+				margin-bottom: 5em;
+				.btn {
+					@include resets.primary-btn();
+				}
+			}
 		}
 
-		.sub-text {
-			max-width: 600px;
-			margin: 0 auto;
-			margin-bottom: 1.9em;
-		}
+		.carousel-slide-container {
+			z-index: 5;
+			// width: 60%;
+			margin: auto;
+			overflow: hidden; // Essential for hiding non-active slides
+			// border: solid black 2px;
+			position: relative; // For potential absolute positioning of children
 
-		.btn-wrap {
-			.btn {
-				@include resets.primary-btn();
+			.carousel-slider {
+				display: flex;
+				gap: 1em;
+				width: 100%;
+				height: 400px;
+				transition: transform 0.5s ease-in-out; // Smooth sliding animation
+
+				img {
+					width: 100%; // Each image takes full container width
+					height: 100%;
+					object-fit: cover;
+					// flex-shrink: 0; // Prevent images from shrinking
+				}
+			}
+
+			@media screen and (min-width: 62em) {
+				width: 70%;
 			}
 		}
 	}

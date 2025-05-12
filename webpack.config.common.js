@@ -71,6 +71,14 @@ module.exports = {
 			chunks: ['main'],
 			favicon: './src/assets/favicon.png',
 		}),
+
+		// form submit success page
+		new HtmlWebpackPlugin({
+			template: './src/html/success.html',
+			filename: 'success.html',
+			chunks: ['main'],
+			favicon: './src/assets/favicon.png',
+		}),
 	],
 
 	module: {
