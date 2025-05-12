@@ -224,9 +224,9 @@ const formTemplate = (cb) => {
 							<div class="sub-wrap">
 								<div class="content-wrap1">
 									<input type="checkbox" name="consent" id="consent1" required />
-									
+
 									<label for="consent1"
-										>I have read, understood, and accept the Yabsom.school terms and
+										>I have read, understood, and accept the Yabsom.school terms &
 										conditions</label
 									>
 								</div>
