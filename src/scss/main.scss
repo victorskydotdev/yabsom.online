@@ -34,6 +34,8 @@
 
 // admission page
 @use './admission-page/admission-hero';
+@use './admission-page/admission.programs';
+@use './admission-page/social-proof-section';
 
 // success page
 @use './success-page/success-content';

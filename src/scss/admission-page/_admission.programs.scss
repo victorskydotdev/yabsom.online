@@ -1,0 +1,91 @@
+@use '../resets';
+
+.programs {
+	padding-top: 5em;
+	margin-bottom: 7em;
+
+	.container {
+		.text-container {
+			text-align: center;
+			width: 70%;
+			margin: 0 auto;
+			margin-bottom: 4em;
+
+			.heading {
+				font-size: resets.$heading-font-size;
+			}
+		}
+
+		.wrap {
+			display: grid;
+			gap: 4em;
+			@include resets.breakpoints();
+
+			.program-card {
+				.content {
+					.img-wrap {
+						height: 200px;
+						margin-bottom: 1em;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							object-position: center;
+							border-radius: 20px;
+						}
+					}
+
+					.text-wrap {
+						gap: 1em;
+
+						.title {
+							color: resets.$dark;
+							font-size: 1.2rem;
+							margin-bottom: 0.5em;
+						}
+
+						.text {
+							margin-bottom: 1.5em;
+						}
+
+						.btn {
+							width: 100%;
+							@include resets.primary-btn();
+						}
+					}
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 2em;
+
+				.program-card {
+					.content {
+						.text-wrap {
+							.title {
+								max-width: 300px;
+							}
+						}
+					}
+				}
+			}
+
+			@media screen and (min-width: 62em) {
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2em;
+
+				.program-card {
+					.content {
+						.text-wrap {
+							.btn {
+								width: unset;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
