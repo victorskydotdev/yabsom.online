@@ -3,6 +3,7 @@
 .cert-section {
 	padding: 8em 0 4em 0;
 	margin-bottom: 7em;
+	overflow-x: hidden;
 
 	.container {
 		display: grid;
@@ -15,8 +16,9 @@
 		}
 
 		.text-wrap {
+			text-align: center;
+
 			.heading {
-				text-align: center;
 				font-size: resets.$heading-font-size;
 				margin-bottom: 0.3em;
 			}
@@ -26,14 +28,16 @@
 			}
 
 			.btn-wrap {
+				// background: teal;
+
 				.btn {
 					background: #f32a10;
+					width: 100% !important;
 					padding: resets.$btn-padding;
 					color: resets.$light;
 					border: none;
 					text-transform: capitalize;
 					transition: all 0.3s ease-in;
-					width: 100%;
 				}
 			}
 
