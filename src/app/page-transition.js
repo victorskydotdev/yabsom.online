@@ -21,7 +21,7 @@ const fadeInFromTop = (entries, observer) => {
 		if (entry.isIntersecting) {
 			const element = entry.target;
 
-			console.log(element, 'is visible');
+			// console.log(element, 'is visible');
 		}
 	});
 };
@@ -32,7 +32,7 @@ const fadeInFromRight = (entries, observer) => {
 		if (entry.isIntersecting) {
 			const element = entry.target;
 
-			console.log(element, 'is visible');
+			// console.log(element, 'is visible');
 
 			setTimeout(() => {
 				element.classList.add('fadein-from-right');
@@ -48,7 +48,7 @@ const fadeInFromBottom = (entries, observer) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			const element = entry.target;
-			console.log('Visible:', element);
+			// console.log('Visible:', element);
 			// Optional: unobserve after first intersection
 			// observer.unobserve(entry.target);
 
@@ -69,7 +69,7 @@ const fadeInFromLeft = (entries, observer) => {
 		if (entry.isIntersecting) {
 			const element = entry.target;
 
-			console.log(element, 'is visible');
+			// console.log(element, 'is visible');
 
 			setTimeout(() => {
 				element.classList.add('fadein-from-left');
@@ -86,7 +86,7 @@ const scaleUp = (entries, observer) => {
 		if (entry.isIntersecting) {
 			const element = entry.target;
 
-			console.log(element, 'is visible');
+			// console.log(element, 'is visible');
 
 			setTimeout(() => {
 				element.classList.add('scale-up');
