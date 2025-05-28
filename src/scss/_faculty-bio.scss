@@ -5,8 +5,9 @@
 	display: flex;
 	align-items: center;
 	min-height: 100vh;
-	padding-top: 15em;
+	padding-top: 5em;
 	padding-bottom: 5em;
+	margin-bottom: 6em;
 
 	.layer-blur {
 		position: absolute;
@@ -18,6 +19,7 @@
 		background: resets.$gradient;
 		opacity: 0.4;
 		filter: blur(100px);
+		display: none;
 
 		@media screen and (min-width: 43em) {
 			height: 500px;
@@ -28,15 +30,13 @@
 	.container {
 		z-index: 1;
 		display: grid;
-		gap: 2em;
+		gap: 3em;
 		@include resets.breakpoints();
 
 		.text-wrap {
 			max-width: 650px;
-			// background: teal;
 
 			.eyebrow {
-				// background: rgba(208, 52, 57, 0.493);
 				background: #fb8533;
 				display: inline-block;
 				padding: 0.7em 1.5em;
@@ -52,8 +52,36 @@
 
 			.sub-text {
 				margin-bottom: 1.5em;
-				color: resets.$dark;
 				line-height: 1.8;
+			}
+
+			.more-info-wrap {
+				margin-bottom: 0.9em;
+				display: grid;
+				gap: 1em;
+
+				.wrap {
+					.heading-title {
+						margin-bottom: 1em;
+						// background: teal;
+					}
+
+					.content {
+						display: grid;
+						// gap: 1em;
+						// margin-bottom: 1.5em;
+						margin-left: 1em;
+
+						.title {
+							// background: red;
+						}
+
+						.text {
+							line-height: 1.8;
+							margin-bottom: 1em;
+						}
+					}
+				}
 			}
 
 			.btn-wrap {
@@ -64,7 +92,7 @@
 		}
 
 		.img-wrap {
-			height: 300px;
+			height: 350px;
 			width: 100%;
 			background: resets.$dark;
 			overflow: hidden;

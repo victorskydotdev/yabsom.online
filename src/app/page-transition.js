@@ -8,7 +8,7 @@ let elementIndex = 0;
 
 // Proper options object
 const options = {
-	rootMargin: '0px 0px -100px 0px',
+	rootMargin: '250px',
 	threshold: 0.2, // optional: when 10% is visible
 	root: null,
 };
@@ -28,7 +28,7 @@ const fadeInFromTop = (entries, observer) => {
 
 // fadeInFromRight function
 const fadeInFromRight = (entries, observer) => {
-	entries.forEach((entry) => {
+	entries.forEach((entry, index) => {
 		if (entry.isIntersecting) {
 			const element = entry.target;
 
@@ -36,7 +36,7 @@ const fadeInFromRight = (entries, observer) => {
 
 			setTimeout(() => {
 				element.classList.add('fadein-from-right');
-			}, 200);
+			}, 300);
 
 			// elementIndex++;
 		}
@@ -54,7 +54,7 @@ const fadeInFromBottom = (entries, observer) => {
 
 			setTimeout(() => {
 				element.classList.add('fadein-from-bottom');
-			}, elementIndex * 100); // staggered by 300ms
+			}, 200); // staggered by 300ms
 
 			elementIndex++;
 

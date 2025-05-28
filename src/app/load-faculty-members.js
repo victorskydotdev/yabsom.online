@@ -76,6 +76,132 @@ const template = (callback) => {
 						${callback.bio.paragraph6 ? callback.bio.paragraph6 : ''}	
 					</p>
 
+					<div class="more-info-wrap">
+						<div class="wrap">
+							<h4 class="heading-title">${
+								callback.bio.profOverview.heading
+									? callback.bio.profOverview.heading
+									: ''
+							}</h4>
+							
+							<div class="content">
+								<p class="text">${
+									callback.bio.profOverview.paragraph1
+										? callback.bio.profOverview.paragraph1
+										: ''
+								}</p>
+
+								<p class="text">${
+									callback.bio.profOverview.paragraph2
+										? callback.bio.profOverview.paragraph2
+										: ''
+								}</p>
+
+								<p class="text">${
+									callback.bio.profOverview.paragraph3
+										? callback.bio.profOverview.paragraph3
+										: ''
+								}</p>
+							</div>
+						</div>
+						
+						<div class="wrap">
+							<h4 class="heading-title">${
+								callback.bio.keyVenturesInit.heading
+									? callback.bio.keyVenturesInit.heading
+									: ''
+							}</h4>
+
+							<div class="content">
+								<h4 class="title">${
+									callback.bio.keyVenturesInit.venture1.heading
+										? callback.bio.keyVenturesInit.venture1.heading
+										: ''
+								}</h4>
+								
+								<p class="text">${
+									callback.bio.keyVenturesInit.venture1.paragraph1
+										? callback.bio.keyVenturesInit.venture1.paragraph1
+										: ''
+								}</p>
+							</div>
+
+							<div class="content">
+								<h4 class="title">${
+									callback.bio.keyVenturesInit.venture2.heading
+										? callback.bio.keyVenturesInit.venture2.heading
+										: ''
+								}</h4>
+								
+								<p class="text">${
+									callback.bio.keyVenturesInit.venture2.paragraph1
+										? callback.bio.keyVenturesInit.venture2.paragraph1
+										: ''
+								}</p>
+							</div>
+
+							<div class="content">
+								<h4 class="title">${
+									callback.bio.keyVenturesInit.venture3.heading
+										? callback.bio.keyVenturesInit.venture1.heading
+										: ''
+								}</h4>
+								
+								<p class="text">${
+									callback.bio.keyVenturesInit.venture3.paragraph1
+										? callback.bio.keyVenturesInit.venture1.paragraph1
+										: ''
+								}</p>
+							</div>
+
+							<div class="content">
+								<h4 class="title">${
+									callback.bio.keyVenturesInit.venture4.heading
+										? callback.bio.keyVenturesInit.venture4.heading
+										: ''
+								}</h4>
+								
+								<p class="text">${
+									callback.bio.keyVenturesInit.venture4.paragraph1
+										? callback.bio.keyVenturesInit.venture4.paragraph1
+										: ''
+								}</p>
+							</div>
+
+							<div class="content">
+								<h4 class="title">${
+									callback.bio.keyVenturesInit.venture5.heading
+										? callback.bio.keyVenturesInit.venture5.heading
+										: ''
+								}</h4>
+								
+								<p class="text">${
+									callback.bio.keyVenturesInit.venture5.paragraph1
+										? callback.bio.keyVenturesInit.venture5.paragraph1
+										: ''
+								}</p>
+							</div>
+
+							<div class="content">
+								<h4 class="title">${
+									callback.bio.keyVenturesInit.venture6.heading
+										? callback.bio.keyVenturesInit.venture6.heading
+										: ''
+								}</h4>
+								
+								<p class="text">${
+									callback.bio.keyVenturesInit.venture6.paragraph1
+										? callback.bio.keyVenturesInit.venture6.paragraph1
+										: ''
+								}</p>
+							</div>
+						</div>
+						
+						<div class="wrap">
+
+						</div>
+					</div>
+
 					<div class="btn-wrap">
 						<a href="/admission.html" class="btn reg-btn">Enrol Now</a>
 					</div>

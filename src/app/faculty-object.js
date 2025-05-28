@@ -13,7 +13,7 @@ export const facultyMembers = [
 	{
 		id: 1,
 
-		memberName: 'Dr. jephter Akaehie',
+		memberName: 'Dr. Jephter Akaehie',
 
 		image: doctor,
 
@@ -35,7 +35,7 @@ export const facultyMembers = [
 			},
 
 			keyVenturesInit: {
-				heading: 'Key ventures and initiatives',
+				heading: 'Key ventures and initiatives:',
 
 				venture1: {
 					heading: 'Golden Terra Holdings',
@@ -73,7 +73,7 @@ export const facultyMembers = [
 				},
 
 				venture6: {
-					heading: '	African Future Manufacturers Expo',
+					heading: 'African Future Manufacturers Expo',
 
 					paragraph1:
 						'A flagship event under YABSOM, designed to connect, educate, and empower African manufacturers.',
@@ -335,6 +335,100 @@ export const facultyMembers = [
 
 			paragraph2:
 				'She is also the co-founder of Afroganiks Industries, a wellness company supporting women and couples on their fertility and health journey through natural products and education.',
+
+			profOverview: {
+				heading: '',
+
+				paragraph1: '',
+
+				paragraph2: '',
+
+				paragraph3: '',
+			},
+
+			keyVenturesInit: {
+				heading: '',
+
+				venture1: {
+					heading: '',
+
+					paragraph1: '',
+				},
+
+				venture2: {
+					heading: '',
+
+					paragraph1: '',
+				},
+
+				venture3: {
+					heading: '',
+
+					paragraph1: '',
+				},
+
+				venture4: {
+					heading: '',
+
+					paragraph1: '',
+				},
+
+				venture5: {
+					heading: '',
+
+					paragraph1: '',
+				},
+
+				venture6: {
+					heading: '',
+
+					paragraph1: '',
+				},
+			},
+
+			RecogAwards: {
+				heading: '',
+
+				paragraph1: '',
+
+				paragraph2: '',
+
+				paragraph3: '',
+
+				paragraph4: '',
+
+				paragraph5: '',
+
+				paragraph6: '',
+
+				paragraph7: '',
+
+				paragraph8: '',
+
+				paragraph9: '',
+
+				paragraph10: '',
+			},
+
+			education: {
+				heading: '',
+
+				paragraph1: '',
+
+				paragraph2: '',
+			},
+
+			socialImpact: {
+				heading: '',
+
+				paragraph1: '',
+			},
+
+			stratVision: {
+				heading: '',
+
+				paragraph1: '',
+			},
 		},
 	},
 
