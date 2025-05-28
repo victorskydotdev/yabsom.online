@@ -1,12 +1,12 @@
 @use '../resets';
 
 .admission-hero {
-	min-height: 100vh;
+	height: 80vh;
 	display: flex;
 	align-items: center;
-	padding-top: 15em;
+	justify-content: center;
+	padding-top: 8em;
 	overflow-x: hidden;
-	margin-bottom: 7em;
 
 	.layer-blur {
 		@include resets.layer-blur();
@@ -16,56 +16,52 @@
 		text-align: center;
 
 		.text-wrap {
+			max-width: 600px;
+			margin: 0 auto;
 			@include resets.breakpoints();
 
 			.heading {
-				color: resets.$hero-heading-color;
-				font-size: clamp(2rem, 3vw, 4rem);
-				max-width: 600px;
-				margin: 0 auto;
 				margin-bottom: 0.3em;
+				font-size: clamp(2rem, 3vw, 4rem);
+				color: resets.$hero-heading-color;
 			}
 
 			.sub-text {
-				max-width: 600px;
-				margin: 0 auto;
 				margin-bottom: 1.9em;
 			}
 
 			.btn-wrap {
-				margin-bottom: 5em;
 				.btn {
 					@include resets.primary-btn();
 				}
 			}
 		}
+	}
+}
 
-		.carousel-slide-container {
-			z-index: 3;
-			// width: 60%;
-			margin: auto;
-			overflow: hidden; // Essential for hiding non-active slides
-			// border: solid black 2px;
-			position: relative; // For potential absolute positioning of children
+.admission-swiper {
+	.swiper-wrapper {
+		margin-bottom: 7em;
 
-			.carousel-slider {
-				display: flex;
-				gap: 1em;
-				width: 100%;
+		img {
+			height: 300px;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		width: 80%;
+		margin: 0 auto;
+
+		.swiper-wrapper {
+			img {
 				height: 400px;
-				transition: transform 0.5s ease-in-out; // Smooth sliding animation
-
-				img {
-					width: 100%; // Each image takes full container width
-					height: 100%;
-					object-fit: cover;
-					// flex-shrink: 0; // Prevent images from shrinking
-				}
-			}
-
-			@media screen and (min-width: 62em) {
-				width: 70%;
 			}
 		}
+	}
+
+	@media screen and (min-width: 62em) {
+		width: 65%;
 	}
 }

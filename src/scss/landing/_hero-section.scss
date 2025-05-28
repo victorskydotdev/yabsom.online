@@ -4,7 +4,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	min-height: 100vh;
+	height: 100vh;
 	padding-top: 15em;
 	padding-bottom: 5em;
 
@@ -12,11 +12,18 @@
 		@include resets.layerBlur();
 	}
 
+	.swiper {
+		height: 70vh;
+	}
+
 	.container {
 		z-index: 1;
 		display: grid;
 		gap: 2em;
-		@include resets.breakpoints();
+		// @include resets.breakpoints();
+
+		width: 85%;
+		margin: 0 auto;
 
 		.text-wrap {
 			max-width: 650px;
@@ -62,12 +69,14 @@
 
 		@media screen and (min-width: 62em) {
 			align-items: center;
+			padding-top: 5em;
 
 			.img-wrap {
 				position: absolute;
 				right: 0;
 				width: 400px;
 				height: 380px;
+				z-index: 3;
 			}
 		}
 	}

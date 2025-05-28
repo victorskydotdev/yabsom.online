@@ -1,10 +1,11 @@
 @use '../resets';
 
-.programs-section {
+.programs {
 	padding-top: 5em;
+	margin-bottom: 7em;
 
 	.container {
-		.text-wrap {
+		.text-container {
 			text-align: center;
 			width: 70%;
 			margin: 0 auto;
@@ -17,95 +18,94 @@
 
 		.wrap {
 			display: grid;
-			gap: 1em;
-			grid-auto-flow: column;
-			grid-auto-columns: 90%;
-			overflow-x: auto;
-			scroll-snap-type: x mandatory;
-
-			padding-left: 3em;
-			padding-bottom: 5em;
+			gap: 4em;
+			@include resets.breakpoints();
 
 			.program-card {
-				height: 400px;
 				position: relative;
-				scroll-snap-align: start;
 
 				.content {
-					// background: resets.$dark;
-					height: 95%;
-					width: 95%;
-					position: absolute;
-					left: 2.5%;
-					top: 2.5%;
-
-					.text-wrap {
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						justify-content: 50%;
-						transform: translate(-50%, -50%);
-						z-index: 1;
-						display: grid;
-						gap: 1em;
-
-						.title {
-							color: resets.$light;
-							font-size: 1.2rem;
-						}
-
-						.btn {
-							@include resets.primary-btn();
-						}
-					}
-
 					.img-wrap {
-						height: 100%;
-						position: absolute;
-						top: 0;
-						left: 0;
+						height: 200px;
+						margin-bottom: 1em;
 
 						img {
 							width: 100%;
 							height: 100%;
 							object-fit: cover;
 							object-position: center;
-							border-radius: 30px;
+							border-radius: 20px;
 						}
 					}
 
-					&::after {
-						content: '';
-						position: absolute;
-						top: 0;
-						left: 0%;
-						height: 100%;
-						width: 100%;
-						background: rgba(0, 0, 0, 0.726);
-						border-radius: 30px;
+					.text-wrap {
+						gap: 1em;
+
+						.title {
+							color: resets.$dark;
+							font-size: 1.2rem;
+							margin-bottom: 0.5em;
+						}
+
+						.text {
+							margin-bottom: 1.5em;
+						}
+
+						.price-btn-wrap {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+
+							.price {
+								position: absolute;
+								top: 1%;
+								right: 1.5%;
+								padding: 0.8em;
+								font-size: 1.2rem;
+								background: resets.$light;
+								color: #f32a10;
+								border-radius: 40px;
+							}
+
+							.btn {
+								width: 100%;
+								@include resets.primary-btn();
+							}
+						}
 					}
-				}
-
-				.overlay {
-					height: 100%;
-					position: absolute;
-					width: 100%;
-
-					background: resets.$gradient;
-					z-index: -1;
 				}
 			}
 
 			@media screen and (min-width: 43em) {
-				grid-auto-columns: 40%;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 2em;
+
+				.program-card {
+					.content {
+						.text-wrap {
+							.title {
+								max-width: 300px;
+							}
+						}
+					}
+				}
 			}
 
 			@media screen and (min-width: 62em) {
-				grid-auto-columns: 30%;
-				gap: 1em;
-				padding-bottom: 6em;
-				// background: teal;
-				height: fit-content;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2em;
+
+				.program-card {
+					.content {
+						.text-wrap {
+							.price-btn-wrap {
+								.btn {
+									width: unset;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

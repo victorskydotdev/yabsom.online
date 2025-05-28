@@ -214,9 +214,9 @@ button {
 		width: 85%;
 	}
 
-	@media screen and (min-width: 62em) {
-		width: 90%;
-	}
+	// @media screen and (min-width: 62em) {
+	// 	width: 90%;
+	// }
 }
 
 @mixin layer-blur() {

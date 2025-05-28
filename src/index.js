@@ -11,7 +11,7 @@ import { loadCourseData } from './app/load-course';
 import { handleFormSubmission } from './app/reg-form';
 
 import { triggerPageTransitions } from './app/page-transition';
-import { slideImages } from './app/images-slider';
+import { triggerSwiper } from './app/swiper';
 
 import { renderData } from './app/success-script';
 
@@ -27,6 +27,7 @@ handleFormSubmission();
 
 window.addEventListener('DOMContentLoaded', () => {
 	triggerPageTransitions();
-	slideImages();
+
 	renderData();
+	triggerSwiper();
 });

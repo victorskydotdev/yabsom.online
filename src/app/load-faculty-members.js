@@ -77,7 +77,7 @@ const template = (callback) => {
 					</p>
 
 					<div class="btn-wrap">
-						<button class="btn reg-btn">Enrol Now</button>
+						<a href="/admission.html" class="btn reg-btn">Enrol Now</a>
 					</div>
 				</div>
 

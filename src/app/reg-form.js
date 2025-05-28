@@ -351,6 +351,8 @@ export const handleFormSubmission = () => {
 
 										setTimeout(() => {
 											window.location.href = '/success.html';
+
+											loadspinModal.classList.remove('show-loading');
 										}, 3500);
 									}
 								}
