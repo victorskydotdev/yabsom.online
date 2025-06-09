@@ -1,131 +1,268 @@
 @use '../resets';
 
+.layer-blur {
+	@include resets.layerBlur();
+}
+
 .hero-section {
 	position: relative;
 	display: flex;
 	align-items: center;
-
+	overflow-x: hidden !important;
 	padding-top: 5em;
-	padding-bottom: 5em;
 
 	@media screen and (min-width: 62em) {
-		padding-top: 6em;
-	}
-
-	.layer-blur {
-		display: none;
-		@include resets.layerBlur();
-	}
-
-	.swiper {
-		@media screen and (min-width: 62em) {
-			height: 70vh;
-		}
+		padding-top: 8em;
 	}
 
 	.container {
-		z-index: 1;
-		display: grid;
-		gap: 2em;
+		width: 90%;
+		max-width: 800px;
+		margin: 0 auto;
 
 		.text-wrap {
-			width: 85%;
-			margin: 0 auto;
+			text-align: center;
+
+			.eyebrow {
+				background: rgb(243, 42, 16, 0.3);
+				width: fit-content;
+				padding: 9px 18px;
+				border-radius: 40px;
+				color: rgb(243, 42, 16);
+				font-weight: 500;
+				margin: 0 auto 1.5em;
+				font-size: 14px;
+			}
 
 			.heading {
 				color: resets.$hero-heading-color;
-				font-size: clamp(2rem, 3vw, 4rem);
-				margin-bottom: 0.3em;
-				line-height: 1.4;
+				margin-bottom: 0.5em;
+
+				@media screen and (min-width: 62em) {
+					font-size: 2.5em;
+				}
 			}
 
 			.sub-text {
-				margin-bottom: 1.5em;
-				color: resets.$dark;
-				line-height: 1.8;
+				margin-bottom: 2em;
+				line-height: 2;
+
+				@media screen and (min-width: 62em) {
+					padding: 0 2em;
+				}
 			}
 
-			.btn-wrap {
-				display: flex;
-				gap: 0.8em;
-
-				.primary-btn {
+			.link-wrap {
+				.btn-link1 {
 					@include resets.primary-btn();
 				}
-
-				.secondary-btn {
-					@include resets.secondary-btn();
-				}
 			}
-		}
-
-		.img-wrap {
-			height: 300px;
-			width: 100%;
-			background: resets.$dark;
-
-			.img {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
-			}
-
-			.lady-image {
-				object-position: left;
-			}
-		}
-
-		@media screen and (min-width: 62em) {
-			.text-wrap {
-				max-width: 650px;
-				margin: unset;
-				margin-left: 7.5%;
-			}
-		}
-
-		@media screen and (min-width: 62em) {
-			align-items: center;
-			padding-top: 5em;
-
-			.text-wrap {
-				max-width: 650px;
-			}
-
-			.img-wrap {
-				position: absolute;
-				right: 0;
-				width: 400px;
-				height: 400px;
-				z-index: 3;
-			}
-		}
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 100%;
-		height: 1.5px;
-		width: 95%;
-		background: resets.$gradient;
-		right: 0;
-
-		@media screen and (min-width: 62em) {
-			width: 90%;
 		}
 	}
 }
 
-@keyframes bounce {
-	0% {
-		transform: translateY(10%);
+// curvy lines property/values
+.main-img-section {
+	position: relative;
+	overflow-x: hidden;
+
+	@media screen and (min-width: 62em) {
+		overflow-x: unset;
+	}
+	.curvy-lines {
+		object-fit: contain;
+		object-position: center;
+		// width: 700px;
+		margin-left: -5em;
+		margin-top: 2em;
+
+		@media screen and (min-width: 43em) {
+			margin-left: 0;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 
+	.rounded {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 50%;
+		}
+	}
+
+	.rounded1 {
+		position: absolute;
+		border-radius: 50%;
+		// background: resets.$gradient;
+
+		top: 5%;
+		left: 2%;
+		height: 100px;
+		width: 100px;
+		animation: bounce1 2s infinite 200ms;
+
+		@media screen and (min-width: 43em) {
+			top: 5%;
+			left: 10%;
+		}
+
+		@media screen and (min-width: 62em) {
+			top: 15%;
+			left: 10%;
+			height: 100px;
+			width: 100px;
+		}
+	}
+
+	.rounded2 {
+		position: absolute;
+		border-radius: 50%;
+		// background: resets.$gradient;
+		top: 0;
+		top: 30%;
+		left: 30%;
+		height: 70px;
+		width: 70px;
+		animation: bounce2 2s infinite 1s;
+
+		@media screen and (min-width: 43em) {
+			top: 35%;
+			left: 35%;
+		}
+
+		@media screen and (min-width: 62em) {
+			top: 30%;
+			left: 25%;
+			height: 120px;
+			width: 120px;
+		}
+	}
+
+	.rounded3 {
+		position: absolute;
+		border-radius: 50%;
+		// background: resets.$gradient;
+		top: 0;
+		right: 5%;
+		top: 40%;
+		height: 90px;
+		width: 90px;
+		animation: bounce3 2s infinite 500ms;
+
+		@media screen and (min-width: 43em) {
+			top: 20%;
+		}
+
+		@media screen and (min-width: 62em) {
+			top: 12%;
+			right: 16%;
+			height: 150px;
+			width: 150px;
+		}
+	}
+
+	.rounded4 {
+		position: absolute;
+		border-radius: 50%;
+		// background: resets.$gradient;
+
+		top: 0;
+		left: 20%;
+		top: 70%;
+		height: 70px;
+		width: 70px;
+		animation: bounce4 2s infinite 800ms;
+
+		@media screen and (min-width: 62em) {
+			top: 78%;
+			left: 26%;
+			height: 100px;
+			width: 100px;
+		}
+	}
+
+	.rounded5 {
+		position: absolute;
+		border-radius: 50%;
+		// background: resets.$gradient;
+		top: 0;
+		right: 20%;
+		top: 83%;
+		height: 90px;
+		width: 90px;
+		animation: bounce5 1.8s infinite;
+
+		@media screen and (min-width: 62em) {
+			top: 60%;
+			right: 15%;
+			height: 120px;
+			width: 120px;
+		}
+	}
+}
+
+@keyframes bounce1 {
+	0% {
+		transform: translateY(0);
+	}
 	50% {
-		transform: translateY(50%);
+		transform: translateY(-20px);
 	}
+	100% {
+		transform: translateY(0);
+	}
+}
 
+@keyframes bounce2 {
 	0% {
-		transform: translateY(0%);
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-25px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounce3 {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-30px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounce4 {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-35px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes bounce5 {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }

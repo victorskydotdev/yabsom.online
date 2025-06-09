@@ -1,6 +1,9 @@
 @use './resets';
 
 .footer {
+	background: resets.$dark;
+	padding: 5em 0;
+
 	.container {
 		width: 90%;
 		margin: 0 auto;
@@ -18,7 +21,8 @@
 			}
 
 			.heading {
-				margin-bottom: 1.5em;
+				margin-bottom: 1.9em;
+				color: resets.$light;
 			}
 
 			.contact-details {
@@ -29,6 +33,7 @@
 					display: flex;
 					align-items: center;
 					gap: 10px;
+					color: resets.$light;
 
 					i {
 						@include resets.text-gradient();
@@ -39,6 +44,7 @@
 			.footer-nav {
 				display: grid;
 				gap: 1em;
+				color: resets.$light;
 			}
 
 			.wrapper {

@@ -2,7 +2,7 @@
 
 .header-nav {
 	position: sticky;
-	top: 0;
+	top: 2%;
 	width: 100%;
 	height: 15vh;
 	display: flex;
@@ -91,8 +91,11 @@
 
 				.nav-wrap {
 					height: unset;
-					// background: red;
-					height: 15vh;
+					background: rgb(55, 55, 55, 0.1);
+					height: unset;
+					backdrop-filter: blur(10px);
+					padding: 13px 20px;
+					border-radius: 15px;
 
 					display: flex !important;
 					align-items: center;
@@ -167,8 +170,8 @@
 }
 
 .add-nav-bg {
-	background: resets.$light;
-	box-shadow: resets.$shadow;
+	// background: resets.$light;
+	// box-shadow: resets.$shadow;
 }
 
 // fixing the nav-links colors for contrast

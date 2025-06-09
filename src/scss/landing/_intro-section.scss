@@ -44,6 +44,12 @@
 			.wrap {
 				text-align: center;
 
+				.heading {
+					// background: teal;
+					max-width: 500px;
+					margin: 0 auto 1.2em;
+				}
+
 				.sub-text {
 					max-width: 630px;
 					margin: 0 auto;
