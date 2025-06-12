@@ -7,7 +7,7 @@
 	height: 15vh;
 	display: flex;
 	align-items: center;
-	z-index: 4;
+	z-index: 999;
 	transition: all 0.5s ease-in;
 
 	.nav {
@@ -32,10 +32,11 @@
 		.nav-list {
 			position: fixed;
 			height: 90vh;
-			width: 95%;
+			width: 100%;
 			top: 0;
 			right: 0;
 			background: resets.$light;
+			box-shadow: resets.$shadow;
 			z-index: 5;
 			display: flex;
 			align-items: center;
@@ -48,6 +49,27 @@
 				display: grid;
 				gap: 3em;
 
+				&::after {
+					content: '';
+					position: absolute;
+					right: 25%;
+					top: 20;
+					height: 50%;
+					width: 2px;
+					background: resets.$gradient;
+				}
+
+				.nav-logo {
+					position: absolute;
+					top: 7%;
+
+					.nav-link {
+						img {
+							width: 100px;
+						}
+					}
+				}
+
 				.nav-item {
 					.nav-link {
 						color: resets.$dark;
@@ -55,26 +77,34 @@
 				}
 
 				.close-mobile-nav {
-					background: resets.$gradient;
 					position: absolute;
 					top: 10%;
-					right: 15%;
-					height: 50px;
-					width: 50px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					color: #fff;
+					right: 10%;
+					height: 40px;
+					width: 40px;
+					color: red;
 					cursor: pointer;
+					border-radius: 10px;
+
+					@media screen and (min-width: 43em) {
+						right: 30%;
+					}
 
 					i {
 						font-size: 1.5rem;
+						line-height: 0;
 					}
 				}
 			}
 
 			@media screen and (min-width: 43em) {
 				width: 50%;
+
+				.nav-wrap {
+					.nav-logo {
+						display: none;
+					}
+				}
 			}
 
 			@media screen and (min-width: 62em) {
@@ -88,6 +118,7 @@
 				padding-left: unset;
 				background: unset;
 				transform: unset;
+				box-shadow: unset;
 
 				.nav-wrap {
 					height: unset;
@@ -96,7 +127,6 @@
 					backdrop-filter: blur(10px);
 					padding: 13px 20px;
 					border-radius: 15px;
-
 					display: flex !important;
 					align-items: center;
 
@@ -153,8 +183,9 @@
 			background: resets.$gradient;
 			align-items: center;
 			justify-content: center;
-			height: 80px;
-			width: 80px;
+			height: 60px;
+			width: 60px;
+			border-radius: 15px;
 
 			.fi {
 				font-size: 1.6rem;

@@ -83,14 +83,6 @@
 				margin-bottom: 2em;
 				line-height: resets.$line-height;
 			}
-
-			.btn-wrap {
-				.btn {
-					padding: 0.8em 2em;
-					font-size: 1rem;
-					@include resets.primary-btn();
-				}
-			}
 		}
 
 		.values-card-wrap {

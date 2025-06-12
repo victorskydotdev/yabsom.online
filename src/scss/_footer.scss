@@ -38,18 +38,31 @@
 					i {
 						@include resets.text-gradient();
 					}
+
+					p {
+						color: #fff;
+					}
 				}
 			}
 
 			.footer-nav {
 				display: grid;
 				gap: 1em;
-				color: resets.$light;
+
+				li {
+					a {
+						color: #fff;
+					}
+				}
 			}
 
 			.wrapper {
 				display: grid;
 				gap: 4em;
+
+				.sub-text {
+					color: #fff;
+				}
 
 				.footer-social-icons {
 					display: flex;

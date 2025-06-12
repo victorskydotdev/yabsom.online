@@ -12,6 +12,13 @@ const navbarTemplate = () => {
 
       <ul class="nav-list">
         <div class="nav-wrap">
+          <li class="nav-logo">
+            <a href="/" class="nav-link">
+              <img src="${brandLogo}" alt="" />
+            </a>
+          </li>
+
+
           <li class="nav-item">
             <a href="/" class="nav-link program-link">Home</a>
           </li>
@@ -37,7 +44,7 @@ const navbarTemplate = () => {
           </li>
 
           <span class="close-mobile-nav">
-            <i class="fi fi-ss-angle-right"></i>
+            <i class="fa-solid fa-xmark"></i>
           </span>
         </div>
       </ul>

@@ -62,12 +62,12 @@
 			.card {
 				height: 250px;
 				width: 100%;
-				background: resets.$gradient;
 
 				img {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
+					border-radius: 20px;
 				}
 
 				.third-img {

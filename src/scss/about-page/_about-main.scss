@@ -6,7 +6,7 @@
 	min-height: 100vh;
 	margin-bottom: 5em;
 	position: relative;
-	padding-top: 15em;
+	padding-top: 7em;
 	// gap: 10em;
 
 	.layer-blur {
@@ -51,13 +51,6 @@
 				color: resets.$dark;
 				line-height: 1.8;
 			}
-
-			.btn-wrap {
-				.btn {
-					@include resets.primary-btn();
-					width: 100%;
-				}
-			}
 		}
 
 		.bg-img-wrap {
@@ -69,6 +62,7 @@
 				height: 100%;
 				width: 100%;
 				object-fit: cover;
+				border-radius: 20px;
 			}
 		}
 
@@ -116,9 +110,5 @@
 				line-height: 1.5;
 			}
 		}
-	}
-
-	@media screen and (min-width: 62em) {
-		padding-top: 15em;
 	}
 }

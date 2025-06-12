@@ -71,6 +71,10 @@ button {
 	}
 }
 
+.pagination-btn {
+	--swiper-theme-color: #f32a10;
+}
+
 .arc-shaped-bg {
 	position: absolute;
 	top: 40%;
@@ -133,7 +137,7 @@ button {
 	opacity: 0.2;
 	filter: blur(100px);
 	// display: none;
-	z-index: 10;
+	// z-index: 10;
 
 	@media screen and (min-width: 43em) {
 		height: 500px;

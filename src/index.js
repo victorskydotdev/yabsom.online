@@ -29,5 +29,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	triggerPageTransitions();
 
 	renderData();
-	// triggerSwiper();
+	triggerSwiper();
 });

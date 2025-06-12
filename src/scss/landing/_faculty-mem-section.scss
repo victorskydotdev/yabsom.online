@@ -21,21 +21,24 @@
 			margin-bottom: 5em;
 
 			.card {
-				height: 400px;
+				height: 500px;
 				width: 100%;
 				background: resets.$dark;
 				position: relative;
+				border-radius: 20px;
+				overflow: hidden;
 
 				img {
-					height: 100%;
+					height: 65%;
 					width: 100%;
 					object-fit: cover;
 					transition: all 0.6s ease-in-out;
+					object-position: top;
 				}
 
 				.member-info-wrap {
 					position: absolute;
-					top: 65%;
+					top: 70%;
 					text-align: center;
 
 					left: 50%;
@@ -43,10 +46,6 @@
 
 					.text-wrap {
 						color: resets.$light;
-						opacity: 0;
-						visibility: hidden;
-						transition: all 0.6s ease-in-out;
-						// background: red;
 
 						.name {
 							text-wrap: nowrap;
@@ -65,19 +64,19 @@
 					}
 				}
 
-				&:hover {
-					img {
-						transform: translateY(0);
-						height: 60%;
-					}
+				// &:hover {
+				// 	img {
+				// 		transform: translateY(0);
+				// 		height: 60%;
+				// 	}
 
-					.member-info-wrap {
-						.text-wrap {
-							opacity: 1;
-							visibility: visible;
-						}
-					}
-				}
+				// 	.member-info-wrap {
+				// 		.text-wrap {
+				// 			opacity: 1;
+				// 			visibility: visible;
+				// 		}
+				// 	}
+				// }
 			}
 
 			@media screen and (min-width: 43em) {
