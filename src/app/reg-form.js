@@ -14,6 +14,12 @@ const formTemplate = (cb) => {
 					<img src="${brandLogo}" alt="brand logo" />
 				</div>
 
+				<!-- close button -->
+				<button class="close-btn" id="reg-form-close-btn">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+				
+
 				<h3 class="form-heading">You are registering for ${cb}</h3>
 
 				<p class="subtext">Please fill out this form to begin your journey toward becoming a Certified African Manufacturing Entrepreneur</p>
@@ -222,28 +228,31 @@ const formTemplate = (cb) => {
 							</p>
 
 							<div class="sub-wrap">
+								<!-- consent 1 -->
 								<div class="content-wrap1">
-									<input type="checkbox" name="consent" id="consent1" required />
+									<input type="checkbox" name="terms and conditions consent" id="consent1" required />
 
 									<label for="consent1"
-										>I have read, understood, and accept the Yabsom.school terms &
+										>I have read, understood, and accept the yabsom.school terms &
 										conditions</label
 									>
 								</div>
+
+								<!-- consent 2 -->
 								<div class="content-wrap2">
-									<input type="checkbox" name="consent" id="consent2" required />
+									<input type="checkbox" name="communication consent" id="consent2" required />
 
 									<label for="consent2"
-										>I have read, understood, and accept the Yabsom.school terms and
-										conditions</label
+										>I agree to receive updates and communication from YABSOM</label
 									>
 								</div>
+
+								<!-- consent 3 -->
 								<div class="content-wrap3">
-									<input type="checkbox" name="consent" id="consent3" required />
+									<input type="checkbox" name="information accuracy consent" id="consent3" required />
 
 									<label for="consent3"
-										>I have read, understood, and accept the Yabsom.school terms and
-										conditions</label
+										>I confirm that the information provided is accurate and complete to the best of my knowledge.</label
 									>
 								</div>
 							</div>
@@ -284,6 +293,14 @@ export const handleFormSubmission = () => {
 				regForm.innerHTML = formTemplate(courseName);
 
 				const form = document.querySelector('.form');
+				const closeBtn = document.querySelector('#reg-form-close-btn');
+
+				if (closeBtn) {
+					closeBtn.addEventListener('click', (e) => {
+						e.preventDefault();
+						regForm.classList.remove('show-reg-form');
+					});
+				}
 
 				if (form) {
 					form.addEventListener('submit', (e) => {
