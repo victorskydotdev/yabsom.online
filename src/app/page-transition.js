@@ -8,7 +8,7 @@ let elementIndex = 0;
 
 // Proper options object
 const options = {
-	rootMargin: '250px',
+	rootMargin: '-100px',
 	threshold: 0.2, // optional: when 10% is visible
 	root: null,
 };
@@ -36,7 +36,7 @@ const fadeInFromRight = (entries, observer) => {
 
 			setTimeout(() => {
 				element.classList.add('fadein-from-right');
-			}, 300);
+			}, 100);
 
 			// elementIndex++;
 		}
@@ -73,7 +73,7 @@ const fadeInFromLeft = (entries, observer) => {
 
 			setTimeout(() => {
 				element.classList.add('fadein-from-left');
-			}, 300); // staggered by 300ms
+			}, 100); // staggered by 300ms
 
 			elementIndex++;
 		}
@@ -90,7 +90,7 @@ const scaleUp = (entries, observer) => {
 
 			setTimeout(() => {
 				element.classList.add('scale-up');
-			}, 300);
+			}, 100);
 		}
 	});
 };

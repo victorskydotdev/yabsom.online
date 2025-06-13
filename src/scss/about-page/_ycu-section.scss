@@ -3,6 +3,7 @@
 .ycu-section {
 	padding: 2em 0 4em 0;
 	position: relative;
+	overflow: hidden;
 
 	&::before {
 		content: '';
@@ -15,6 +16,8 @@
 	}
 
 	.container {
+		position: relative;
+
 		.text-wrap {
 			margin-bottom: 3em;
 
@@ -42,63 +45,90 @@
 			}
 		}
 
-		.card-wrap {
-			display: grid;
-			grid-auto-flow: column;
-			grid-auto-columns: 90%;
-			overflow-x: auto;
-			padding-left: 5%;
-			gap: 1em;
-			padding-bottom: 1em;
-			scroll-snap-type: x mandatory;
-			padding-left: 2em;
-			padding-bottom: 6em;
+		.element-slider {
+			width: 100%;
 
-			.card {
-				scroll-snap-align: start;
-				background: resets.$dark;
-				color: resets.$light;
-				// padding: 1.5em;
-				border-radius: 1em;
-				overflow: hidden;
+			.swiper-wrapper {
+				.swiper-slide {
+					width: 350px;
 
-				.wrap {
-					.img-wrap {
-						height: 150px;
-						width: 100%;
-						background: resets.$light;
+					.card {
+						background: resets.$dark;
+						color: resets.$light;
+						border-radius: 1em;
+						overflow: hidden;
 
-						img {
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
-							object-position: top;
+						.wrap {
+							.img-wrap {
+								height: 150px;
+								width: 100%;
+								background: resets.$light;
+
+								img {
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+									object-position: top;
+								}
+							}
+						}
+
+						.text-area {
+							padding: 1em 1.5em 1.8em 1.5em;
+
+							.heading {
+								margin-bottom: 1em;
+							}
+
+							.text {
+								color: resets.$light;
+							}
 						}
 					}
-				}
 
-				.text-area {
-					padding: 1em 1.5em 1.8em 1.5em;
-
-					.heading {
-						margin-bottom: 1em;
-					}
-
-					.text {
-						color: resets.$light;
+					@media screen and (min-width: 62em) {
+						width: 400px;
 					}
 				}
 			}
+		}
 
-			@media screen and (min-width: 43em) {
-				grid-auto-columns: 50%;
+		.wrapper {
+			transform: translateX(50%);
+			width: 10%;
+			position: absolute;
+			top: 10%;
+			right: 11.8%;
+
+			.btn {
+				position: absolute;
+				top: 0;
+				--swiper-navigation-color: #fff;
+				--swiper-navigation-size: 20px;
+				background: resets.$gradient;
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
 			}
 
-			@media screen and (min-width: 62em) {
-				grid-auto-columns: 30%;
-				scroll-snap-type: unset;
+			// .btn1 {
+			// 	transform: translateX(2600%);
+			// }
 
-				padding-left: 5%;
+			// .btn2 {
+			// 	transform: translateX(-500%);
+			// }
+
+			@media screen and (max-width: 62em) {
+				transform: translateX(0);
+				width: 100%;
+				top: 65%;
+				right: 0;
+
+				.btn {
+					margin-right: 10px;
+					margin-left: 10px;
+				}
 			}
 		}
 	}

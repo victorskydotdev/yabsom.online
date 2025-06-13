@@ -12,6 +12,7 @@ import { handleFormSubmission } from './app/reg-form';
 
 import { triggerPageTransitions } from './app/page-transition';
 import { triggerSwiper } from './app/swiper';
+import { triggerSwiper2 } from './app/swiper2';
 
 import { renderData } from './app/success-script';
 
@@ -30,4 +31,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	renderData();
 	triggerSwiper();
+	triggerSwiper2();
 });
