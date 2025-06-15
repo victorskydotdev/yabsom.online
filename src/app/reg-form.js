@@ -252,7 +252,7 @@ const formTemplate = (cb) => {
 					
 
 					<div class="btn-wrap">
-						<button class="submit-btn">Register now</button>
+						<button class="submit-btn" id="reg-form-submit-btn">Register now</button>
 					</div>
 				</form>
 			</div>
@@ -283,6 +283,7 @@ export const handleFormSubmission = () => {
 
 				const form = document.querySelector('.form');
 				const closeBtn = document.querySelector('#reg-form-close-btn');
+				const submitBtn = document.getElementById('reg-form-submit-btn');
 
 				if (closeBtn) {
 					closeBtn.addEventListener('click', (e) => {
@@ -294,6 +295,9 @@ export const handleFormSubmission = () => {
 				if (form) {
 					form.addEventListener('submit', (e) => {
 						e.preventDefault();
+
+						submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Submitting...`;
+						submitBtn.disabled = true;
 
 						const formData = new FormData(e.target);
 						const jsonData = {};

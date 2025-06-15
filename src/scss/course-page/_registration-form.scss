@@ -301,6 +301,10 @@
 			.btn-wrap {
 				.submit-btn {
 					@include resets.primary-btn();
+
+					// .progress-indicator {
+					// 	display: none;
+					// }
 				}
 			}
 		}
