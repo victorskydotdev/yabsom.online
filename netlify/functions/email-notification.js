@@ -2,6 +2,7 @@ const mailgun = require('mailgun-js');
 
 exports.handler = async (event) => {
 	const formData = JSON.parse(event.body);
+	console.log('formData', formData);
 
 	const {
 		firstName,
@@ -17,7 +18,9 @@ exports.handler = async (event) => {
 		cityTown,
 		highestQualification,
 		currentlyRunABusiness,
-		consent,
+		termsConditionsConsent,
+		communicationConsent,
+		informationAccuracyConsent,
 		yabsomEmail,
 	} = formData;
 
@@ -30,7 +33,8 @@ exports.handler = async (event) => {
 
 	const notificationData = {
 		from: 'Yabsom <postmaster@yabsom.school>',
-		to: yabsomEmail,
+		to: [`Yabsom School <${yabsomEmail}>`],
+		replyTo: 'admissions@yabsom.school',
 		subject: 'New Student Reg Notification',
 		text: `Hello Admin, 
 
@@ -48,19 +52,21 @@ exports.handler = async (event) => {
     City/Town: ${cityTown},
     Highest Qualification: ${highestQualification},
     Currently Running a Business: ${currentlyRunABusiness},
-    Consent Given: ${consent}.
+    Terms and Conditions Consent: ${termsConditionsConsent},
+		Communication Consent: ${communicationConsent},
+		Information Accuracy Consent: ${informationAccuracyConsent},
 		`,
 	};
 
 	const autoresponseData = {
-		from: 'Yabsom.school <postmaster@yabsom.school>',
-		to: email,
+		from: 'Yabsom.school <hello@yabsom.school>',
+		to: [`Registration Confirmation <${email}>`],
 		subject: 'Registration Successful!',
 		text: `Hello ${firstName} ${lastName}, 
 
 		Your registration is successful and is being verified by our team.
 
-		You'll receive another email as soon as verification is compplete.
+		You'll receive another email as soon as verification is complete.
 
     Your Registration Id: ${registrationId}, please keep this safe as this would be used to validate your registration in the future.    
 		`,

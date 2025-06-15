@@ -67,9 +67,9 @@ const formTemplate = (cb) => {
 									<input type="radio" name="gender" value="female" id="female" required />
 								</label>
 								
-								<label for="other">Other: 
+								<!-- <label for="other">Other: 
 									<input type="radio" name="gender" id="other" value="other" required />
-								</label>
+								</label> -->
 							</div>
 						</div>
 						
@@ -119,9 +119,10 @@ const formTemplate = (cb) => {
 								<label for="qualification">Highest qualification*</label>
 
 								<select id="qualification" name="highestQualification">
-									<option value="Nothing selected">--Please choose an option--</option>
+									<option value="Nothing selected">Please choose an option</option>
 									<option value="secondary school cert">Secondary / High School</option>
-									<option value="Undergraduate">Undergraduate</option>
+									<option value="Undergraduate / Bsc.">Undergraduate/Bsc</option>
+
 									<option value="Postgraduate">Masters/PHD</option>
 									<option value="Vocational / Technical">Vocational / Technical</option>
 								</select>
@@ -130,14 +131,14 @@ const formTemplate = (cb) => {
 
 						<div class="wrap data-wrap business-wrap">
 							<div class="sub-wrap">
-								<label for="business-status">Currently run a business?*</label>
+								<label for="business-status">Currently run a business?</label>
 								
 								<label for="businessStatusYes">Yes: 
-									<input type="radio" name="business-status" id="businessStatusYes" value="Yes, I run a business" required />
+									<input type="radio" name="businessStatus" id="businessStatusYes" value="Yes, I am running a business"  />
 								</label>
 
 								<label for="BusinessStatusNo">No: 
-									<input type="radio" name="business-status" value="No, I don't run a business" id="BusinessStatusNo" required />
+									<input type="radio" name="businessStatus" value="No, I'm not running a business" id="BusinessStatusNo" />
 								</label>
 							</div>
 						</div>
@@ -152,7 +153,7 @@ const formTemplate = (cb) => {
 						<div class="wrap data-wrap">
 							<div class="sub-wrap">
 								<label for="experience">Years of Experience in Manufacturing and Entreprenuership*</label>
-								<input type="number" name="yearsOfExperience" id="experience" required />
+								<input type="number" name="yearsOfExperience" id="experience" required placeholder="Enter years of experience in numbers" />
 							</div>
 						</div>
 					</div>
@@ -167,7 +168,7 @@ const formTemplate = (cb) => {
 								<label for="select-program">Which Yabsom program are you registering for?*</label>
 								
 								<select id="select-program" name="selectedProgram">
-									<option value="Nothing selected">--Please choose an option--</option>
+									<option value="Nothing selected">Please choose an option</option>
 									<option value="Manufacturing Leadership Certificate">Manufacturing Leadership Certificate</option>
 
 									<option value="Certificate in Lean Manufacturing">Certificate in Lean Manufacturing</option>
@@ -184,7 +185,7 @@ const formTemplate = (cb) => {
 								<label for="learning-mode">Preferred learning mode*</label>
 								
 								<select id="select-program" name="learning-mode">
-									<option value="Nothing selected">--Please choose an option--</option>
+									<option value="Nothing selected">Please choose an option</option>
 
 									<option value="Online">Online</option>
 
@@ -198,7 +199,7 @@ const formTemplate = (cb) => {
 								<label for="medium-of-discovery">How did you learn about us?</label>
 								
 								<select id="select-program" name="medium-of-discovery">
-									<option value="Nothing selected">--Please choose an option--</option>
+									<option value="Nothing selected">Please choose an option</option>
 
 									<option value="social media">Social media</option>
 									<option value="referral">Referral</option>
@@ -230,30 +231,18 @@ const formTemplate = (cb) => {
 							<div class="sub-wrap">
 								<!-- consent 1 -->
 								<div class="content-wrap1">
-									<input type="checkbox" name="terms and conditions consent" id="consent1" required />
-
-									<label for="consent1"
-										>I have read, understood, and accept the yabsom.school terms &
-										conditions</label
-									>
+									<input type="checkbox" checked name="termsConditionsConsent" id="consent1" required />
+									<label for="consent1">I have read, understood, and accept the yabsom.school terms & conditions</label>
 								</div>
 
-								<!-- consent 2 -->
 								<div class="content-wrap2">
-									<input type="checkbox" name="communication consent" id="consent2" required />
-
-									<label for="consent2"
-										>I agree to receive updates and communication from YABSOM</label
-									>
+									<input type="checkbox" name="communicationConsent" id="consent2" required />
+									<label for="consent2">I agree to receive updates and communication from YABSOM</label>
 								</div>
 
-								<!-- consent 3 -->
 								<div class="content-wrap3">
-									<input type="checkbox" name="information accuracy consent" id="consent3" required />
-
-									<label for="consent3"
-										>I confirm that the information provided is accurate and complete to the best of my knowledge.</label
-									>
+									<input type="checkbox" name="informationAccuracyConsent" id="consent3" required />
+									<label for="consent3">I confirm that the information provided is accurate and complete to the best of my knowledge.</label>
 								</div>
 							</div>
 						</div>
@@ -320,7 +309,7 @@ export const handleFormSubmission = () => {
 						// append the generated regNum and program Title
 						formData.append('registrationId', generatedRegNum);
 						formData.append('program', courseName);
-						formData.append('yabsomEmail', 'yabsom.school@gmail.com');
+						formData.append('yabsomEmail', 'hello@yabsom.school');
 
 						console.log(formData);
 
