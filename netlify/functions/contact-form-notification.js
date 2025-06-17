@@ -3,7 +3,9 @@ const mailgun = require('mailgun-js');
 exports.handler = async (event) => {
 	const formData = JSON.parse(event.body);
 
-	const { firstName, lastName, email, registrationId } = formData;
+	const { firstName, lastName, phone, email, message } = formData;
+
+	console.log('Form Data:', formData);
 
 	const DOMAIN = process.env.MAILGUN_DOMAIN;
 
@@ -14,15 +16,16 @@ exports.handler = async (event) => {
 
 	const emailData = {
 		from: 'Yabsom.school <postmaster@yabsom.school>',
-		to: email,
-		subject: 'Registration Successful!',
-		text: `Hello ${firstName} ${lastName}, 
-
-		Your registration is successful and is being verified by our team.
-
-		You'll receive another email as soon as verification is compplete.
-
-    Your Registration Id: ${registrationId}, please keep this safe as this would be used to validate your registration in the future.    
+		to: [`Yabsom School <hello@yabsom.school>`],
+		subject: 'New Contact Form Submission!',
+		text: `Hello Admin!
+You have received a new contact form submission from ${firstName} ${lastName}.
+Here are the details:
+First Name: ${firstName}
+Last Name: ${lastName}
+Phone: ${phone}
+Email: ${email}
+Message: ${message}  
 		`,
 	};
 
@@ -31,7 +34,7 @@ exports.handler = async (event) => {
 
 		return {
 			statusCode: 200,
-			body: JSON.stringify({ message: 'User notified successfully!' }),
+			body: JSON.stringify({ message: 'Email submitted successfully!' }),
 		};
 	} catch (error) {
 		console.error('Mailgun error:', error);
