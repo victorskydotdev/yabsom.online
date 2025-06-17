@@ -19,13 +19,14 @@ exports.handler = async (event) => {
 		to: [`Yabsom School <hello@yabsom.school>`],
 		subject: 'New Contact Form Submission!',
 		text: `Hello Admin!
-You have received a new contact form submission from ${firstName} ${lastName}.
-Here are the details:
-First Name: ${firstName}
-Last Name: ${lastName}
-Phone: ${phone}
-Email: ${email}
-Message: ${message}  
+		
+		You have received a new contact form submission from ${firstName} ${lastName}.
+		Here are the details:
+		First Name: ${firstName}
+		Last Name: ${lastName}
+		Phone: ${phone}
+		Email: ${email}
+		Message: ${message}  
 		`,
 	};
 
